@@ -1,0 +1,48 @@
+﻿@using Hairdresser.Entities
+@model IEnumerable<Personnel>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+<h2>Personel Listesi</h2>
+<br />
+<a asp-action="personelEkle"> Personel Ekle</a>
+
+<table class="table table-sm table-bordered table-sm-custom">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Adı Soyadı</th>
+			<th>Uzmanlık Alanı</th>
+			<th>Çalışma Saatleri</th>
+			<th>Email</th>
+			<th>Sifre</th>
+			<th>Güncelle</th>
+			<th>Sil</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var per in Model)
+		{
+			<tr>
+				<td>@per.personnelID</td>
+				<td>@per.personnelName</td>
+				<td>@per.expertises.expertiseName</td>
+				<td>@per.availableHours</td>
+				<td>@per.personnelEmail</td>
+				<td>@per.personnelPassword</td>
+
+				<td><a href="" class="btn btn-outline-info">Güncelle</a></td>
+				<td><a href="" class="btn btn-outline-danger">Sil</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

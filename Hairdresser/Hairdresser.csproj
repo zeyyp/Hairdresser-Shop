@@ -7,12 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue-comment.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\issue-staler.yml" />
   </ItemGroup>
 
 </Project>

@@ -22,38 +22,75 @@ namespace Hairdresser.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ExpertisePersonnel", b =>
+            modelBuilder.Entity("Hairdresser.Entities.AppUser", b =>
                 {
-                    b.Property<int>("expertisesexpertiseID")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("personnelspersonnelID")
-                        .HasColumnType("integer");
-
-                    b.HasKey("expertisesexpertiseID", "personnelspersonnelID");
-
-                    b.HasIndex("personnelspersonnelID");
-
-                    b.ToTable("ExpertisePersonnel");
-                });
-
-            modelBuilder.Entity("Hairdresser.Entities.Admin", b =>
-                {
-                    b.Property<int>("adminID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("adminID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("adminEmail")
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("text");
 
-                    b.Property<string>("adminPassword")
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("PasswordHash")
                         .HasColumnType("text");
 
-                    b.HasKey("adminID");
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
 
-                    b.ToTable("admins");
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("adSoyad")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex");
+
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Appointment", b =>
@@ -70,14 +107,33 @@ namespace Hairdresser.Migrations
                     b.Property<DateTime>("appointmentDate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<TimeSpan>("appointmentHour")
+                        .HasColumnType("interval");
+
                     b.Property<int>("customerID")
                         .HasColumnType("integer");
+
+                    b.Property<string>("customerName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("notes")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("personnelID")
                         .HasColumnType("integer");
 
+                    b.Property<string>("phone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("serviceID")
                         .HasColumnType("integer");
+
+                    b.Property<string>("serviceName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("appointmentID");
 
@@ -88,28 +144,6 @@ namespace Hairdresser.Migrations
                     b.HasIndex("serviceID");
 
                     b.ToTable("appointments");
-                });
-
-            modelBuilder.Entity("Hairdresser.Entities.Customer", b =>
-                {
-                    b.Property<int>("customerID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("customerID"));
-
-                    b.Property<string>("customerEmail")
-                        .HasColumnType("text");
-
-                    b.Property<string>("customerName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("customerPassword")
-                        .HasColumnType("text");
-
-                    b.HasKey("customerID");
-
-                    b.ToTable("customers");
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Expertise", b =>
@@ -139,7 +173,16 @@ namespace Hairdresser.Migrations
                     b.Property<string>("availableHours")
                         .HasColumnType("text");
 
+                    b.Property<int?>("expertisesexpertiseID")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("personnelEmail")
+                        .HasColumnType("text");
+
                     b.Property<string>("personnelName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("personnelPassword")
                         .HasColumnType("text");
 
                     b.Property<int>("salonID")
@@ -147,9 +190,40 @@ namespace Hairdresser.Migrations
 
                     b.HasKey("personnelID");
 
+                    b.HasIndex("expertisesexpertiseID");
+
                     b.HasIndex("salonID");
 
                     b.ToTable("personnels");
+                });
+
+            modelBuilder.Entity("Hairdresser.Entities.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex");
+
+                    b.ToTable("AspNetRoles", (string)null);
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Salon", b =>
@@ -204,24 +278,112 @@ namespace Hairdresser.Migrations
                     b.ToTable("services");
                 });
 
-            modelBuilder.Entity("ExpertisePersonnel", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("Hairdresser.Entities.Expertise", null)
-                        .WithMany()
-                        .HasForeignKey("expertisesexpertiseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
 
-                    b.HasOne("Hairdresser.Entities.Personnel", null)
-                        .WithMany()
-                        .HasForeignKey("personnelspersonnelID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("text");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Appointment", b =>
                 {
-                    b.HasOne("Hairdresser.Entities.Customer", "Customer")
+                    b.HasOne("Hairdresser.Entities.AppUser", "Customer")
                         .WithMany("appointments")
                         .HasForeignKey("customerID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -248,11 +410,17 @@ namespace Hairdresser.Migrations
 
             modelBuilder.Entity("Hairdresser.Entities.Personnel", b =>
                 {
+                    b.HasOne("Hairdresser.Entities.Expertise", "expertises")
+                        .WithMany("personnels")
+                        .HasForeignKey("expertisesexpertiseID");
+
                     b.HasOne("Hairdresser.Entities.Salon", "salon")
                         .WithMany("personnels")
                         .HasForeignKey("salonID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("expertises");
 
                     b.Navigation("salon");
                 });
@@ -268,9 +436,65 @@ namespace Hairdresser.Migrations
                     b.Navigation("salon");
                 });
 
-            modelBuilder.Entity("Hairdresser.Entities.Customer", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
+                {
+                    b.HasOne("Hairdresser.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.HasOne("Hairdresser.Entities.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.HasOne("Hairdresser.Entities.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.HasOne("Hairdresser.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hairdresser.Entities.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.HasOne("Hairdresser.Entities.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Hairdresser.Entities.AppUser", b =>
                 {
                     b.Navigation("appointments");
+                });
+
+            modelBuilder.Entity("Hairdresser.Entities.Expertise", b =>
+                {
+                    b.Navigation("personnels");
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Personnel", b =>

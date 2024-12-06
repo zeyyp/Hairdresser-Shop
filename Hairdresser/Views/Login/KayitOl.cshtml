@@ -1,0 +1,51 @@
+﻿
+@model Hairdresser.Models.KullaniciKayitViewModel
+
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="KayitOl" method="post">
+    <div class="form-group">
+        <label asp-for="adSoyad" class="control-label"></label>
+        <input asp-for="adSoyad" class="form-control" />
+        <span asp-validation-for="adSoyad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="userName" class="control-label"></label>
+        <input asp-for="userName" class="form-control" />
+        <span asp-validation-for="userName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="sifre" class="control-label"></label>
+        <input asp-for="sifre" class="form-control" type="password" />
+        <span asp-validation-for="sifre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="sifreTekrar" class="control-label"></label>
+        <input asp-for="sifreTekrar" class="form-control" type="password" />
+        <span asp-validation-for="sifreTekrar" class="text-danger"></span>
+    </div>
+
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+</form>
+
+<!-- Validation Messages -->
+@* @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+   }  *@
+

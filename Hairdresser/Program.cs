@@ -1,4 +1,7 @@
 using Hairdresser.Context;
+using Hairdresser.Entities;
+using Hairdresser.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;  // DbContext'in bulunduðu namespace'i dahil edin
 
 
@@ -16,6 +19,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));  // PostgreSQL kullanýyorsanýz, Npgsql'u burada belirtiyoruz
 
+
+
+builder.Services.AddIdentity<AppUser, Role>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,10 +38,22 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
+
 
 app.Run();
