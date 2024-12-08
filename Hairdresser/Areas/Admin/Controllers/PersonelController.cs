@@ -1,5 +1,6 @@
 ﻿using Hairdresser.Context;
 using Hairdresser.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,21 +35,46 @@ namespace Hairdresser.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult PersonelEkle(Personnel p)
+        public async Task<IActionResult>  PersonelEkle(Personnel p)
         {
             if (ModelState.IsValid) 
             {
-                _context.personnels.Add(p); // Yeni personel ekle
-                _context.SaveChanges(); // Değişiklikleri kaydet
-                return RedirectToAction("Index","Personel"); 
+               
+                var salon = await _context.salons.FirstOrDefaultAsync(s => s.salonID == 1);        
+
+                if (salon == null)
+                {
+                    // Hata mesajı, salon bulunamadı
+                    ModelState.AddModelError("salonID", "Geçerli bir salon seçmediniz.");
+                    return View(p);
+                }
+
+                Personnel personel = new Personnel()
+                {
+                    personnelName = p.personnelName,
+                    personnelEmail = p.personnelEmail,
+                    personnelPassword = p.personnelPassword,
+                   availableHours = p.availableHours,
+                   ExpertiseID = p.ExpertiseID,
+                   salonID = 1
+
+                };
+
+                _context.personnels.Add(personel); // Yeni personel ekle
+                await _context.SaveChangesAsync(); // Değişiklikleri kaydet
+               
+                return RedirectToAction("Index", "Personel", new { area = "Admin" });
+
             }
 
+
             return View(p);
-           
+            
+                
         }
 
-        [HttpPost]
-        public IActionResult PersonelSil(int id)
+        [HttpGet]
+        public IActionResult DeletePer(int id)
         {
             
             var personel = _context.personnels.Find(id);
@@ -64,39 +90,44 @@ namespace Hairdresser.Areas.Admin.Controllers
         }
 
 
-        //[HttpGet]
-        //public IActionResult PersonelGuncelle(int id)
-        //{
-        //    var personel = _context.personnels.Find(id); // ID'ye göre personel bul
-            
-        //    if (personel == null)
-        //    {
-        //        return RedirectToAction("Index"); // Personel bulunamazsa listeye yönlendir
-        //    }
-        //    return View(personel); // Bulunan personel bilgilerini View'e gönder
-        //}
+        [HttpGet]
+        public async Task<IActionResult> UpdatePer(int id)
+        {
+            var personel = await _context.personnels.FirstOrDefaultAsync(p => p.personnelID == id); // ID'ye göre personel bul
 
-        //[HttpPost]
-        //public IActionResult PersonelGuncelle(Personnel p)
-        //{
-        //    if (ModelState.IsValid) // Form verileri geçerli mi?
-        //    {
-        //        var personel = _context.personnels.Find(p.personnelID); // Eski kaydı bul
-        //        if (personel != null)
-        //        {
-        //            // Alanları güncelle
-        //            personel.personnelName = p.personnelName;
-        //            personel.personnelID = p.personnelID;
-        //            personel.availableHours = p.availableHours;
-        //            personel.personnelEmail = p.personnelEmail;
-        //            personel.personnelPassword = p.personnelPassword;
+            if (personel == null)
+            {
+                return RedirectToAction("Index"); // Personel bulunamazsa listeye yönlendir
+            }
+            return View(personel); // Bulunan personel bilgilerini View'e gönder
+        }
 
-        //            _context.SaveChanges(); // Değişiklikleri veritabanına kaydet
-        //            return RedirectToAction("Index"); // Başarılı olursa listeye dön
-        //        }
-        //    }
-        //    return View(p); // Hatalıysa aynı sayfayı yeniden yükle
-        //}
+        [HttpPost]
+        public async Task<IActionResult> UpdatePer(Personnel p)
+        {
+            if (ModelState.IsValid) // Form verileri geçerli mi?
+            {
+                var personel = await _context.personnels.FirstOrDefaultAsync(per => per.personnelID == p.personnelID); // Eski kaydı bul
+                
+                if (personel != null)
+                {
+                    // Alanları güncelle
+                    personel.personnelName = p.personnelName;
+                    personel.personnelID = p.personnelID;
+                    personel.availableHours = p.availableHours;
+                    personel.personnelEmail = p.personnelEmail;
+                    personel.personnelPassword = p.personnelPassword;
+                    personel.ExpertiseID = p.ExpertiseID;
+                    personel.salonID = 1;
+
+                    _context.personnels.Update(personel);
+                    await _context.SaveChangesAsync();
+                    
+                    return RedirectToAction("Index"); // Başarılı olursa listeye dön
+                }
+            }
+            return View(p); // Hatalıysa aynı sayfayı yeniden yükle
+        }
 
 
     }

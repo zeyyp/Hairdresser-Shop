@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Hairdresser.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241204185618_appointment_update")]
-    partial class appointment_update
+    [Migration("20241207104307_yeni")]
+    partial class yeni
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -110,8 +110,8 @@ namespace Hairdresser.Migrations
                     b.Property<DateTime>("appointmentDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<TimeOnly>("appointmentHour")
-                        .HasColumnType("time without time zone");
+                    b.Property<TimeSpan>("appointmentHour")
+                        .HasColumnType("interval");
 
                     b.Property<int>("customerID")
                         .HasColumnType("integer");
@@ -120,8 +120,16 @@ namespace Hairdresser.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("notes")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("personnelID")
                         .HasColumnType("integer");
+
+                    b.Property<string>("phone")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("serviceID")
                         .HasColumnType("integer");
@@ -165,11 +173,11 @@ namespace Hairdresser.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("personnelID"));
 
+                    b.Property<int>("ExpertiseID")
+                        .HasColumnType("integer");
+
                     b.Property<string>("availableHours")
                         .HasColumnType("text");
-
-                    b.Property<int?>("expertisesexpertiseID")
-                        .HasColumnType("integer");
 
                     b.Property<string>("personnelEmail")
                         .HasColumnType("text");
@@ -185,7 +193,7 @@ namespace Hairdresser.Migrations
 
                     b.HasKey("personnelID");
 
-                    b.HasIndex("expertisesexpertiseID");
+                    b.HasIndex("ExpertiseID");
 
                     b.HasIndex("salonID");
 
@@ -407,7 +415,9 @@ namespace Hairdresser.Migrations
                 {
                     b.HasOne("Hairdresser.Entities.Expertise", "expertises")
                         .WithMany("personnels")
-                        .HasForeignKey("expertisesexpertiseID");
+                        .HasForeignKey("ExpertiseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Hairdresser.Entities.Salon", "salon")
                         .WithMany("personnels")

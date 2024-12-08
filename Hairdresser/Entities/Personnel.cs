@@ -11,6 +11,7 @@
         public int salonID { get; set; } // Foreign Key
         public Salon ?salon { get; set; }  // Navigation property (Salon ile ilişki kurma)
 
+        public int ExpertiseID { get; set; } // Foreign Key
         public Expertise ?expertises { get; set; } // Çalışanın uzmanlık alanları
        
         public ICollection<Appointment> ?appointments { get; set; }   // Çalışan ile ilişkilendirilmiş randevular

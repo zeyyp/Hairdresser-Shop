@@ -13,7 +13,8 @@
 
 <h2>Personel Listesi</h2>
 <br />
-<a asp-action="personelEkle"> Personel Ekle</a>
+<a href="/Admin/Personel/PersonelEkle" class="btn btn-outline-primary">Yeni Personel Ekle</a>
+<br />
 
 <table class="table table-sm table-bordered table-sm-custom">
 	<thead>
@@ -40,8 +41,8 @@
 				<td>@per.personnelEmail</td>
 				<td>@per.personnelPassword</td>
 
-				<td><a href="" class="btn btn-outline-info">Güncelle</a></td>
-				<td><a href="" class="btn btn-outline-danger">Sil</a></td>
+				<td><a href="/Admin/Personel/UpdatePer/@per.personnelID" class="btn btn-outline-info">Güncelle</a></td>
+				<td><a href ="/Admin/Personel/DeletePer/@per.personnelID" class="btn btn-outline-danger">Sil</a></td>
 			</tr>
 		}
 	</tbody>

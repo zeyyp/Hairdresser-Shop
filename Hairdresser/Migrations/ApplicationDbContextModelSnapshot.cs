@@ -170,11 +170,11 @@ namespace Hairdresser.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("personnelID"));
 
+                    b.Property<int>("ExpertiseID")
+                        .HasColumnType("integer");
+
                     b.Property<string>("availableHours")
                         .HasColumnType("text");
-
-                    b.Property<int?>("expertisesexpertiseID")
-                        .HasColumnType("integer");
 
                     b.Property<string>("personnelEmail")
                         .HasColumnType("text");
@@ -190,7 +190,7 @@ namespace Hairdresser.Migrations
 
                     b.HasKey("personnelID");
 
-                    b.HasIndex("expertisesexpertiseID");
+                    b.HasIndex("ExpertiseID");
 
                     b.HasIndex("salonID");
 
@@ -412,7 +412,9 @@ namespace Hairdresser.Migrations
                 {
                     b.HasOne("Hairdresser.Entities.Expertise", "expertises")
                         .WithMany("personnels")
-                        .HasForeignKey("expertisesexpertiseID");
+                        .HasForeignKey("ExpertiseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Hairdresser.Entities.Salon", "salon")
                         .WithMany("personnels")

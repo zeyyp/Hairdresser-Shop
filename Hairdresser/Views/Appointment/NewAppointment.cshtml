@@ -5,56 +5,6 @@
 
 <h2>Yeni Randevu</h2>
 
-@* <form asp-action="NewAppointment"  method="post">
-
-    <!-- Ad Soyad -->
-    <div class="form-group">
-        <label asp-for="adSoyad">Ad Soyad</label>
-        <input class="form-control" asp-for="adSoyad" placeholder="Adınızı ve soyadınızı giriniz" />
-        <span asp-validation-for="adSoyad" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="service">Hizmet Seçiniz</label>
-        <select class="form-control" asp-for="service">
-            <option value="">Hizmet Seçin</option>
-            @foreach (var service in ViewBag.Services as List<Hairdresser.Entities.Service>)
-            {
-                <option value="@service.serviceID">@service.serviceName</option>
-            }
-        </select>
-        <span asp-validation-for="service" class="text-danger"></span>
-    </div>
-
-    <!-- Tarih -->
-    <div class="form-group">
-        <label asp-for="date">Tarih</label>
-        <input type="date" class="form-control" asp-for="date"  />
-        <span asp-validation-for="date" class="text-danger"></span>
-    </div>
-
-    <!-- Saat -->
-    <div class="form-group">
-        <label asp-for="saat">Saat</label>
-        <input type="time" class="form-control" asp-for="saat" />
-        <span asp-validation-for="saat" class="text-danger"></span>
-    </div>
-
-    <!-- Telefon Numarası -->
-    <div class="form-group">
-        <label asp-for="PhoneNumber">Telefon Numarası</label>
-        <input type="tel" class="form-control" asp-for="PhoneNumber" placeholder="Telefon numaranızı giriniz" pattern="[0-9]{10}" />
-        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-    </div>
-
-    <!-- Notlar -->
-    <div class="form-group">
-        <label asp-for="Notes">Notlar</label>
-        <textarea class="form-control" asp-for="Notes" rows="3" placeholder="Eklemek istediğiniz bir not var mı?"></textarea>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Randevu Al</button>
-</form> *@
 
 <form asp-action="NewAppointment" method="post">
 

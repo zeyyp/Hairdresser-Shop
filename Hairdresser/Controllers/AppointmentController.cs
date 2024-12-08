@@ -60,7 +60,7 @@ namespace Hairdresser.Controllers
                     phone = model.PhoneNumber,
                     notes = model.Notes,
 
-                    IsConfirmed = true,
+                    IsConfirmed = false,
                     personnelID = 1,
                     customerID = 2,
 

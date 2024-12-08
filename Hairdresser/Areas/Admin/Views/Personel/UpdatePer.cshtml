@@ -1,0 +1,59 @@
+﻿
+
+@model Hairdresser.Entities.Personnel  // Tekil personel modeli belirtiliyor
+
+
+@{
+    ViewData["Title"] = "Personel Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1> Personel Güncelle</h1>
+
+
+<form asp-area="Admin" asp-controller="Personel" asp-action="UpdatePer" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <input type="hidden" asp-for="personnelID" value="@Model.personnelID" name="personnelID" />
+
+    <div class="mb-3">
+        <label asp-for="personnelName" class="form-label"> Personel Ad Soyad Giriniz:</label>
+        <input asp-for="personnelName" value="@Model.personnelName"  name="personnelName" class="form-control">
+        <span asp-validation-summary="personnelName"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="personnelEmail" class="form-label"> Personel Email Giriniz:</label>
+        <input asp-for="personnelEmail" value="@Model.personnelEmail" name="personnelEmail" class="form-control">
+        <span asp-validation-summary="personnelEmail"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="personnelPassword" class="form-label"> Personel Sifre Giriniz:</label>
+        <input asp-for="personnelPassword" value="@Model.personnelPassword" name="personnelPassword" class="form-control">
+        <span asp-validation-summary="personnelPassword"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="availableHours" class="form-label">Calısma Saatleri giriniz:</label>
+        <input asp-for="availableHours" value="@Model.availableHours" name="availableHours" class="form-control">
+        <span asp-validation-summary="availableHours"></span>
+
+    </div>
+
+    
+    <!-- salonID Görünen Ancak Read-Only Alan -->
+    <div class="mb-3">
+        <label asp-for="salonID" class="form-label">Salon ID:</label>
+        <input asp-for="salonID" name="salonID" class="form-control" value="1" readonly />
+        <span asp-validation-for="salonID"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ExpertiseID" class="form-label">Uzmanlık Alanı giriniz:</label>
+        <input asp-for="ExpertiseID" value="@Model.ExpertiseID" name="ExpertiseID" class="form-control">
+        <span asp-validation-summary="ExpertiseID"></span>
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Güncelle</button>
+</form>
+
