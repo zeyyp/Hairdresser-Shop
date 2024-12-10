@@ -21,11 +21,7 @@ namespace Hairdresser.Context
        // public DbSet<Admin>? admins { get; set; }
         //  public DbSet<Photo> Photos { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    // PostgreSQL bağlantı dizesini belirtin
-        //    optionsBuilder.UseNpgsql(@"Host=localhost;Database=Hairdresser;Username=postgres;Password=78");
-        //}
+        
 
 
     }

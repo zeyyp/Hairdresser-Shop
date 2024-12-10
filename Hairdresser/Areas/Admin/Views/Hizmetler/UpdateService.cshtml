@@ -1,0 +1,45 @@
+﻿
+
+@model Hairdresser.Entities.Service
+
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>UpdateService</h1>
+
+
+
+
+
+<form asp-area="Admin" asp-controller="Hizmetler" asp-action="UpdateService" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <!-- Salon ID (Hidden) -->
+    <input type="hidden" asp-for="serviceID" value="@Model.serviceID" name="serviceID" />
+
+    <div class="mb-3">
+        <label asp-for="serviceName" class="form-label">Hizmet Adı:</label>
+        <input asp-for="serviceName" value="@Model.serviceName" name="serviceName" class="form-control" />
+        <span asp-validation-for="serviceName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="serviceDuration" class="form-label">Hizmet Süresi:</label>
+        <input asp-for="serviceDuration" value="@Model.serviceDuration" name="serviceDuration" class="form-control" />
+        <span asp-validation-for="serviceDuration" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="servicePrice" class="form-label">Fiyat:</label>
+        <input asp-for="servicePrice" value="@Model.servicePrice" name="servicePrice" class="form-control" />
+        <span asp-validation-for="servicePrice" class="text-danger"></span>
+    </div>
+
+   
+
+
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>

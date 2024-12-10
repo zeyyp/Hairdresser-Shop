@@ -66,25 +66,28 @@ namespace Hairdresser.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(p.Email, p.sifre, false, false);
 
-                if (result != null)
+                var user = await _userManager.FindByEmailAsync(p.Email);
+                if (user == null)
                 {
+                    ModelState.AddModelError("", "Bu e-posta ile kayıtlı bir kullanıcı bulunamadı.");
+                    return View(p);
+                }
 
-                    var claims = new List<Claim>
-                   {
-                       new Claim(ClaimTypes.Name,p.Email)
-                   };
-                    var userIdentity = new ClaimsIdentity(claims,"Login");
-                    ClaimsPrincipal user = new ClaimsPrincipal(userIdentity);
-                    await HttpContext.SignInAsync(user);
+                var result = await _signInManager.PasswordSignInAsync(user, p.sifre, false, false);
+
+                if (result.Succeeded)
+                {
+                    // Kullanıcı giriş işlemi başarılı
                     return RedirectToAction("KayitOl", "Login");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Geçersiz giriş. Lütfen bilgilerinizi kontrol edin.");
+                    // Hatalı giriş
+                    ModelState.AddModelError("", "E-posta veya şifre hatalı. Lütfen bilgilerinizi kontrol edin.");
                     return View(p);
                 }
+               
             }
 
             return View(p);

@@ -1,0 +1,49 @@
+﻿
+@model Hairdresser.Entities.Service  // Tekil personel modeli belirtiliyor
+
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AddService</h1>
+
+
+
+
+
+<form asp-area="Admin" asp-controller="Hizmetler" asp-action="AddService" method="post">
+    <div asp-validation-summary="All"></div>
+
+
+    <div class="mb-3">
+        <label asp-for="serviceName" class="form-label"> Hizmet Giriniz:</label>
+        <input asp-for="serviceName" name="serviceName" class="form-control">
+        <span asp-validation-summary="serviceName"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="serviceDuration" class="form-label"> Hizmet Süresi Giriniz:</label>
+        <input asp-for="serviceDuration" name="serviceDuration" class="form-control">
+        <span asp-validation-summary="serviceDuration"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="servicePrice" class="form-label">Ücret Giriniz:</label>
+        <input asp-for="servicePrice" name="servicePrice" class="form-control">
+        <span asp-validation-summary="servicePrice"></span>
+    </div>
+
+   
+
+
+    <!-- salonID Görünen Ancak Read-Only Alan -->
+    <div class="mb-3">
+        <label asp-for="salonID" class="form-label">Salon ID:</label>
+        <input asp-for="salonID" name="salonID" class="form-control" value="1" readonly />
+        <span asp-validation-for="salonID"></span>
+    </div>
+
+   
+
+    <button type="submit" class="btn btn-secondary">Hizmet Ekle</button>
+</form>

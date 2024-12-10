@@ -46,6 +46,13 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="~/sneat-1.0.0/assets/js/config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.13/jquery.validate.unobtrusive.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -114,7 +121,7 @@
 
                     <!-- Dashboard -->
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="/Admin/Salon" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Salonumuz</div>
                         </a>
@@ -130,7 +137,7 @@
 
                     <!-- Dashboard -->
                     <li class="menu-item">
-                        <a href="index.html" class="menu-link">
+                        <a href="/Admin/Hizmetler" class="menu-link">
                             <i class="menu-icon tf-icons bx bxs-megaphone"></i>
                             <div data-i18n="Analytics">Hizmetler</div>
                         </a>
@@ -301,9 +308,6 @@
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
-  
-
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="~/sneat-1.0.0/assets/vendor/libs/jquery/jquery.js"></script>

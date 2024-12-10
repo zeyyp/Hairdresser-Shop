@@ -80,6 +80,7 @@ namespace Hairdresser.Areas.Admin.Controllers
             var services = _context.services?.ToList() ?? new List<Service>();
 
             ViewBag.Services = services;
+            ViewBag.PersonnelList = _context.personnels.ToList();
 
             return View(appointment); // Bulunan personel bilgilerini View'e gönder
         }
@@ -88,6 +89,8 @@ namespace Hairdresser.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateAppoint(Appointment p)
         {
+           
+
             if (ModelState.IsValid) // Form verileri geçerli mi?
             {
                 var appointment = await _context.appointments.FirstOrDefaultAsync(per => per.appointmentID == p.appointmentID); // Eski kaydı bul
@@ -121,6 +124,7 @@ namespace Hairdresser.Areas.Admin.Controllers
 
             var services = await _context.services.ToListAsync();
             ViewBag.Services = services;
+            ViewBag.PersonnelList = _context.personnels.ToList();
 
             return View(p); // Hatalıysa aynı sayfayı yeniden yükle
         }

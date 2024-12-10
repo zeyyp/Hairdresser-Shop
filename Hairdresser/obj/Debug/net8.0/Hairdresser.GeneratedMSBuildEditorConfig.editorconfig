@@ -40,6 +40,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBvaW50XFVwZGF0ZUFwcG9pbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/AddService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGl6bWV0bGVyXEFkZFNlcnZpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGl6bWV0bGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/UpdateService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGl6bWV0bGVyXFVwZGF0ZVNlcnZpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Personel/DeletePer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGVyc29uZWxcRGVsZXRlUGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,6 +66,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Personel/UpdatePer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGVyc29uZWxcVXBkYXRlUGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Salon/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2Fsb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Salon/UpdateSalon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2Fsb25cVXBkYXRlU2Fsb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Appointment/NewAppointment.cshtml]

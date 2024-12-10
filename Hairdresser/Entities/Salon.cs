@@ -1,6 +1,6 @@
 ﻿namespace Hairdresser.Entities
 {
-    public class Salon
+    public class Salon 
     {
         public int salonID { get; set; }  // Primary Key
         public string ?salonName { get; set; }

@@ -1,0 +1,50 @@
+﻿@using Hairdresser.Entities
+
+@model IEnumerable<Service>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hizmetler</h1>
+<br />
+
+ <a href="/Admin/Hizmetler/AddService" class="btn btn-outline-primary">Hizmet ekle</a>
+<br />
+<br />
+<br />
+
+<table class="table table-striped table-hover">
+	<thead class="table-primary">
+		<tr>
+			<th>Hizmet</th>
+			<th>Hizmet Süresi</th>
+			<th>Fiyatı</th>
+			
+			
+			
+			<th>Güncelle</th>
+			<th>Sil</th>
+
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var r in Model)
+		{
+			<tr>
+				<td>@r.serviceName</td>
+				<td>@r.serviceDuration</td>
+				<td>@r.servicePrice</td>
+				
+
+				<td><a href="/Admin/Hizmetler/UpdateService/@r.serviceID" class="btn btn-outline-secondary">Güncelle</a></td>
+				<td><a href="/Admin/Hizmetler/DeleteService/@r.serviceID" class="btn btn-outline-danger">Sil</a></td>
+
+
+
+
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,51 @@
+﻿@using Hairdresser.Entities
+
+@model IEnumerable<Salon>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Randevu Listesi</h2>
+
+
+<br />
+<br />
+
+<table class="table table-striped table-hover">
+	<thead class="table-primary">
+		<tr>
+			<th>Salon Adı</th>
+			<th>Salon Türü</th>
+			<th>Çalışma Saatleri</th>
+			<th>Adres</th>
+
+			<th>Güncelle</th>
+
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var r in Model)
+		{
+			<tr>
+				<td>@r.salonName</td>
+				<td>@r.salonType</td>
+				<td>@r.workingHours</td>
+				<td>@r.salonAddress</td>
+				
+
+
+
+				<td><a href="/Admin/Salon/UpdateSalon/@r.salonID" class="btn btn-outline-secondary">Güncelle</a></td>
+
+
+
+
+			</tr>
+		}
+	</tbody>
+</table>

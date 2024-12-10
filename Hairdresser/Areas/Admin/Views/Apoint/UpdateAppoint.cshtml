@@ -20,52 +20,85 @@
     <div class="mb-3">
         <label asp-for="customerName" class="form-label"> Müsteri Ad Soyad :</label>
         <input asp-for="customerName" value="@Model.customerName" name="customerName" class="form-control">
-        <span asp-validation-summary="customerName"></span>
+        <span asp-validation-for="customerName"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="phone" class="form-label"> Müsteri telefon :</label>
-        <input asp-for="phone" value="@Model.phone" name="phone" class="form-control">
-        <span asp-validation-summary="phone"></span>
+        <input type="tel" asp-for="phone" value="@Model.phone" name="phone" class="form-control">
+        <span asp-validation-for="phone"></span>
     </div>
-    <div class="mb-3">
+   @*  <div class="mb-3">
         <label asp-for="personnelName" class="form-label"> Personel Ad Soyad:</label>
         <input asp-for="personnelName" value="@Model.personnel?.personnelName" name="personnelName" class="form-control">
         <span asp-validation-summary="personnelName"></span>
-    </div>
+    </div> *@
 
 
 
 
-    <div class="form-group">
+    @* <div class="form-group">
         <label asp-for="service">İşlem Seçiniz</label>
-        <select class="form-control" asp-for="service">
+        <select class="form-control" asp-for="service" name="service">
             <option value="">İşlem Seçin</option>
             @foreach (var service in ViewBag.Services as List<Hairdresser.Entities.Service>)
             {
-               @*  <option value="@service.serviceID">@service.serviceName</option> *@
+                // <option value="@service.serviceID">@service.serviceName</option>
                 <option value="@service.serviceID"
                 @(service.serviceID == Model.serviceID ? "selected" : "")>
                     @service.serviceName
                 </option>
             }
         </select>
-        <span asp-validation-for="service" class="text-danger"></span>
+        <span asp-validation-for="service"  class="text-danger"></span>
+    </div> *@
+
+
+    <!-- Personel -->
+    <div class="mb-3">
+        <label asp-for="personnelID" class="form-label">Personel Seçin:</label>
+        <select asp-for="personnelID" class="form-control" name="personnelID">
+            <option value="">Personel Seçin</option>
+            @foreach (var personnel in ViewBag.PersonnelList as List<Hairdresser.Entities.Personnel>)
+            {
+                <option value="@personnel.personnelID"
+                @(personnel.personnelID == Model.personnelID ? "selected" : "")>
+                    @personnel.personnelName
+                </option>
+            }
+        </select>
+        <span asp-validation-for="personnelID" class="text-danger"></span>
+    </div>
+
+    <!-- İşlem -->
+    <div class="form-group">
+        <label asp-for="serviceID">İşlem Seçiniz:</label>
+        <select asp-for="serviceID" class="form-control" name="serviceID">
+            <option value="">İşlem Seçin</option>
+            @foreach (var service in ViewBag.Services as List<Hairdresser.Entities.Service>)
+            {
+                <option value="@service.serviceID"
+                @(service.serviceID == Model.serviceID ? "selected" : "")>
+                    @service.serviceName
+                </option>
+            }
+        </select>
+        <span asp-validation-for="serviceID" class="text-danger"></span>
     </div>
 
 
     <!-- Tarih -->
     <div class="form-group">
         <label asp-for="appointmentDate">Randevu Tarihi:</label>
-        <input  value="@Model.appointmentDate" class="form-control" asp-for="appointmentDate" />
-        <span asp-validation-for="appointmentDate" class="text-danger"></span>
+        <input type="date" value="@Model.appointmentDate.ToString("yyyy-MM-dd")" class="form-control" name="appointmentDate" asp-for="appointmentDate" />
+        <span asp-validation-for="appointmentDate"  class="text-danger"></span>
     </div>
 
     <!-- Saat -->
     <div class="form-group">
         <label asp-for="appointmentHour">Randevu Saati:</label>
-        <input type="time" value="@Model.appointmentHour" class="form-control" asp-for="appointmentHour" />
-        <span asp-validation-for="appointmentHour" class="text-danger"></span>
+        <input type="time" value="@Model.appointmentHour.ToString(@"hh\:mm")" class="form-control" name="appointmentHour" asp-for="appointmentHour" />
+        <span asp-validation-for="appointmentHour"  class="text-danger"></span>
     </div>
 
 

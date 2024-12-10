@@ -1,0 +1,45 @@
+﻿
+@model Hairdresser.Entities.Salon
+@{
+    ViewData["Title"] = "UpdateSalon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>UpdateSalon</h1>
+
+
+<form asp-area="Admin" asp-controller="Salon" asp-action="UpdateSalon" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <!-- Salon ID (Hidden) -->
+    <input type="hidden" asp-for="salonID"  value="@Model.salonID" name="salonID" />
+
+    <div class="mb-3">
+        <label asp-for="salonName" class="form-label">Salon Adı:</label>
+        <input asp-for="salonName" value="@Model.salonName" name="salonName" class="form-control" />
+        <span asp-validation-for="salonName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="salonType" class="form-label">Salon Türü:</label>
+        <input asp-for="salonType" value="@Model.salonType" name="salonType" class="form-control" />
+        <span asp-validation-for="salonType" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="workingHours" class="form-label">Çalışma Saatleri:</label>
+        <input asp-for="workingHours" value="@Model.workingHours" name="workingHours" class="form-control" />
+        <span asp-validation-for="workingHours" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="salonAddress" class="form-label">Salon Adresi:</label>
+        <input asp-for="salonAddress" value="@Model.salonAddress" name="salonAddress" class="form-control" />
+        <span asp-validation-for="salonAddress" class="text-danger"></span>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
