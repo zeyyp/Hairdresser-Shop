@@ -1,0 +1,38 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<Personnel>
+
+
+<h2>personel listesi</h2>
+<br />
+
+<a asp-action="personelEkle"> Personel Ekle</a>
+
+<table class="table table-sm table-bordered table-sm-custom">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Ad Soyad</th>
+			<th>Çalışma Saatleri</th>
+			<th>Email</th>
+			<th>Sifre</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var per in Model)
+		{
+			<tr>
+				<td>@per.personnelID</td>
+				<td>@per.personnelName</td>
+				<td>@per.availableHours</td>
+				<td>@per.personnelEmail</td>
+				<td>@per.personnelPassword</td>
+
+				<td><a href="">Düzenle</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

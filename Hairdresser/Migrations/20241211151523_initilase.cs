@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Hairdresser.Migrations
 {
     /// <inheritdoc />
-    public partial class yeni : Migration
+    public partial class initilase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

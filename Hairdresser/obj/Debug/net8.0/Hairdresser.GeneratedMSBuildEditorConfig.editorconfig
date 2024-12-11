@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBvaW50XERlbGV0ZUFwcG9pbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Apoint/Onayla.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBvaW50XE9uYXlsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Apoint/RandevuListesi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBvaW50XFJhbmRldnVMaXN0ZXNpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/AddService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGl6bWV0bGVyXEFkZFNlcnZpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/DeleteService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGl6bWV0bGVyXERlbGV0ZVNlcnZpY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/Index.cshtml]
@@ -76,6 +84,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2Fsb25cVXBkYXRlU2Fsb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/AdminPaneli/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbGlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/AdminPaneli/PersonelList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbGlcUGVyc29uZWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Appointment/NewAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcTmV3QXBwb2ludG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -96,6 +112,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cS2F5aXRPbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Personnel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Personnel/PersonelEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXFBlcnNvbmVsRWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,6 +130,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/Users/PersonelEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUGVyc29uZWxFa2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Views/_ViewImports.cshtml]

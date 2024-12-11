@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Hairdresser.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241207104307_yeni")]
-    partial class yeni
+    [Migration("20241211151523_initilase")]
+    partial class initilase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

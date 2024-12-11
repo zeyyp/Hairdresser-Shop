@@ -4,21 +4,7 @@ namespace Hairdresser.Models
 {
     public class AppointmentViewModel
     {
-        //[Required]
-        //public string adSoyad { get; set; }
-        //[Required]
-        //public string service { get; set; }
-        //[Required]
-        //public DateTime date { get; set; }
-
-        //[Required]
-        //public TimeSpan saat { get; set; }
-
-        //[Required]
-        //[Phone]
-        //public string PhoneNumber { get; set; }
-
-        //public string Notes { get; set; }
+        
 
         [Required(ErrorMessage = "Ad Soyad alanı gereklidir.")]
         [StringLength(100, ErrorMessage = "Ad Soyad en fazla 100 karakter olmalıdır.")]
