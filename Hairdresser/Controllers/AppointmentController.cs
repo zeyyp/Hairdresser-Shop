@@ -3,6 +3,7 @@ using Hairdresser.Entities;
 using Hairdresser.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Hairdresser.Controllers
 {
@@ -22,10 +23,12 @@ namespace Hairdresser.Controllers
         {
             // Veritabanından hizmetleri çek
             var services = _context.services?.ToList() ?? new List<Service>();
+            var personels = _context.personnels?.ToList() ?? new List<Personnel>();
 
 
             // Hizmetleri View'a gönder
             ViewBag.Services = services;
+            ViewBag.Personels = personels;
 
             return View();
         }
@@ -40,7 +43,9 @@ namespace Hairdresser.Controllers
               //  var service = await _context.services.FindAsync(model.service);
                
                 var service = await _context.services.FirstOrDefaultAsync(s => s.serviceID == int.Parse(model.service));
-                if (service == null)
+                var personel = await _context.personnels.FirstOrDefaultAsync(s => s.personnelID == int.Parse(model.personnel));
+                
+                if (service == null || personel == null)
                 {
                   //  ModelState.AddModelError("service", "Geçersiz hizmet seçimi.");
                     return View(model);
@@ -48,7 +53,9 @@ namespace Hairdresser.Controllers
 
                 // Veritabanına kaydedilecek Appointment entity'sini oluştur
                 var _appointmentDate = DateTime.SpecifyKind(model.date, DateTimeKind.Local).ToUniversalTime();
-               
+                
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Kullanıcı kimliğini al
+
 
                 var appointment = new Appointment
                 {
@@ -61,8 +68,8 @@ namespace Hairdresser.Controllers
                     notes = model.Notes,
 
                     IsConfirmed = false,
-                    personnelID = 1,
-                    customerID = 2,
+                    personnelID = int.Parse(model.personnel),
+                    customerID = int.Parse(userId),
 
                 };
 
@@ -78,6 +85,7 @@ namespace Hairdresser.Controllers
             {
                 // Eğer model geçerli değilse tekrar formu ve hizmetleri yükle
                 ViewBag.Services = _context.services.ToList();
+                ViewBag.Personels = _context.personnels.ToList();
                 return View(model);
             }
 

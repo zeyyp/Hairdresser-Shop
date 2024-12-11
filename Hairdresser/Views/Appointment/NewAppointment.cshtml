@@ -28,6 +28,19 @@
         <span asp-validation-for="service" class="text-danger"></span>
     </div>
 
+    <!-- personel -->
+    <div class="form-group">
+        <label asp-for="personnel">Personel Seçiniz</label>
+        <select class="form-control" asp-for="personnel">
+            <option value="">Personnel Seçin</option>
+            @foreach (var per in ViewBag.Personels as List<Hairdresser.Entities.Personnel>)
+            {
+                <option value="@per.personnelID">@per.personnelName</option>
+            }
+        </select>
+        <span asp-validation-for="personnel" class="text-danger"></span>
+    </div>
+
     <!-- Tarih -->
     <div class="form-group">
         <label asp-for="date">Tarih</label>

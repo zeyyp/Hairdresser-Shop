@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Compile Remove="Context\IdentityDbContext.cs" />
+    <Compile Remove="Controllers\AdminPaneliController.cs" />
+    <Compile Remove="Controllers\UsersController.cs" />
   </ItemGroup>
 
   <ItemGroup>

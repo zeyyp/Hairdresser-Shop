@@ -14,6 +14,9 @@ namespace Hairdresser.Models
         [Required(ErrorMessage = "Hizmet seçiniz.")]
         public string service { get; set; }
 
+        [Required(ErrorMessage = "Personel seçiniz.")]
+        public string personnel { get; set; }
+
         // Tarih
         [Required(ErrorMessage = "Tarih alanı gereklidir.")]
         [DataType(DataType.Date)]
