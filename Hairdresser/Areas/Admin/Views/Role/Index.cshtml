@@ -1,0 +1,47 @@
+﻿
+@using Hairdresser.Entities
+@model IEnumerable<Role>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Roller</h1>
+
+<td><a href="/Admin/Role/RoleEkle" class="btn btn-outline-info">Yeni Role Ekle</a></td>
+
+<br />
+<br />
+
+
+
+<table class="table table-striped table-hover">
+	<thead >
+		<tr style="background-color: #e6e6fa;">
+			<th>Role Id</th>
+			<th>Role</th>
+			
+			<th>Sil</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var r in Model)
+		{
+			<tr>
+				<td>@r.Id</td>
+				<td>@r.Name</td>
+
+
+
+				<td><a href="/Admin/Role/DeleteRole/@r.Id" class="btn btn-outline-danger">Sil</a></td>
+
+
+
+			</tr>
+		}
+	</tbody>
+</table>

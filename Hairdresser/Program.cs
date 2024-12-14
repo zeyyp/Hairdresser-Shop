@@ -11,7 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-
 // PostgreSQL baðlantý dizesi
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");  // appsettings.json'dan alýnabilir
 
@@ -54,7 +53,6 @@ app.UseEndpoints(endpoints =>
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 
 
 

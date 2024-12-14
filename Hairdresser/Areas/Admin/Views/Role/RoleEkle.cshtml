@@ -1,0 +1,25 @@
+﻿
+
+@model Hairdresser.Areas.Admin.Models.RoleViewModel
+
+@{
+    ViewData["Title"] = "RoleEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Rol Ekle</h1>
+
+<form  asp-controller="Role" asp-action="RoleEkle" method="post">
+    <div asp-validation-summary="All"></div>
+
+
+    <div class="mb-3">
+        <label asp-for="name" class="form-label"> Rol Giriniz:</label>
+        <input asp-for="name" name="name" class="form-control">
+        <span asp-validation-summary="name"></span>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-secondary">Rol Ekle</button>
+</form>

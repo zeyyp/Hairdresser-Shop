@@ -1,0 +1,38 @@
+﻿
+@using Hairdresser.Entities
+@model IEnumerable<AppUser>
+
+@{
+    ViewData["Title"] = "UserRoleList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Kullanıcı Rol Listesi</h1>
+
+<table class="table table-sm table-bordered table-sm-custom">
+	<thead>
+		<tr>
+			
+			<th>Adı Soyadı</th>
+			<th>Email</th>
+			
+			<th>Rol Ata</th>
+			<th>Rolleri</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.adSoyad</td>
+				<td>@item.Email</td>
+
+
+			<td><a href="/Admin/Role/RoleAta/@item.Id" class="btn btn-outline-info">Rol Ata</a></td>
+@* 		//	<td><a href="/Admin/Role/UserRoleList/@item.Id" class="btn btn-outline-info">Rolleri Görüntüle</a></td>
+ *@			</tr>
+		}
+	</tbody>
+</table>
