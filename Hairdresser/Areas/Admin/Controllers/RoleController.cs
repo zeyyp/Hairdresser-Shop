@@ -78,57 +78,72 @@ namespace Hairdresser.Areas.Admin.Controllers
             return View(values);
         }
 
+
+
         [HttpGet]
-        public async Task< IActionResult> RoleAta(int id)
+        public async Task<IActionResult> RoleAta(int id)
         {
-
-            var user =  _userManager.Users.FirstOrDefault(x=>x.Id==id);
-            var roles = _roleManager.Roles.ToList();
-
-            TempData["UserId"] = user.Id;
-
-            var userRoles = await _userManager.GetRolesAsync(user);
-
-            List<RoleAtaViewModel> model = new List<RoleAtaViewModel>();
-            foreach (var role in roles)
+            if(id == null)
             {
-                RoleAtaViewModel r = new RoleAtaViewModel();
-
-                r.RoleId = role.Id;
-                r.rolAdi = role.Name;
-                r.roleSahipMi = userRoles.Contains(role.Name);
-                model.Add(r);
-
-               
-               
+                return RedirectToAction("UserRoleList");
             }
-            ViewBag.Userid = id;
-            return View(model);
+
+
+            var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
+
+
+            if (user != null)
+            {
+                var roles = _roleManager.Roles.ToList();
+                var userRoles = await _userManager.GetRolesAsync(user);
+
+                ViewBag.Roles = await _roleManager.Roles.Select(i => i.Name).ToListAsync();  // atanabılecek tum roller
+
+                
+                    RoleAtaViewModel r = new RoleAtaViewModel();
+                    r.Id = user.Id;
+                   
+                    r.selectedRoles = await _userManager.GetRolesAsync(user);  // kullanıcının var olan rolleri
+
+             
+               return View(r);
+            }
+
+            return RedirectToAction("UserRoleList");
+
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> RoleAta(List<RoleAtaViewModel> model)
+        public async Task<IActionResult> RoleAta(int id,RoleAtaViewModel model)
         {
-
-            var userId =(int) TempData["UserId"];
-            var user = _userManager.Users.FirstOrDefault(x=>x.Id==userId);
-
-            foreach (var item in model)
+            if (id != model.Id)
             {
-                if (item.roleSahipMi)
+                return RedirectToAction("UserRoleList");
+            }
+
+            if (ModelState.IsValid)
+            {
+                var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
+
+                if (user != null)
                 {
-                    await _userManager.AddToRoleAsync(user,item.rolAdi);
-                }
-                else
-                {
-                 //   await _userManager.RemoveFromRoleAsync(user, item.rolAdi);
+                    //kullanıcının rolleri kullanıcıdan sılınır
+                    await _userManager.RemoveFromRolesAsync(user, await _userManager.GetRolesAsync(user));
+                    if (model.selectedRoles != null)
+                    {   // seçili roller eklenir
+                        await _userManager.AddToRolesAsync(user, model.selectedRoles);
+                    }
+                    
                 }
             }
             
-           
-            return View("UserRoleList");
+ 
+            return RedirectToAction("UserRoleList");
         }
+
+
+
 
     }
 }

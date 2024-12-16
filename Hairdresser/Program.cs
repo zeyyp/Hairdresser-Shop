@@ -57,7 +57,7 @@ app.MapControllerRoute(
 
 
 
-
+IdentitySeedData.IdentityTestUser(app);
 
 //SeedData.Initialize(app);
 
