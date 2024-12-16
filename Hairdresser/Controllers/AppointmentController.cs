@@ -1,12 +1,15 @@
 ﻿using Hairdresser.Context;
 using Hairdresser.Entities;
 using Hairdresser.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace Hairdresser.Controllers
 {
+    
+    [Authorize]
     public class AppointmentController : Controller
     {
         private readonly ApplicationDbContext _context;

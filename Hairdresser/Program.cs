@@ -19,9 +19,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));  // PostgreSQL kullanýyorsanýz, Npgsql'u burada belirtiyoruz
 
 
-
-
 builder.Services.AddIdentity<AppUser, Role>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
+
+builder.Services.ConfigureApplicationCookie(options =>{
+    options.LoginPath = "/Login/GirisYap";
+    options.AccessDeniedPath = "/";
+});
+
+
 
 var app = builder.Build();
 

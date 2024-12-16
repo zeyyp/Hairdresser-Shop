@@ -1,5 +1,10 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\img\arkaplan.jpg
+wwwroot\img\makyaj.webp
+wwwroot\img\manikür.webp
+wwwroot\img\sacboyama.jpg
+wwwroot\img\sackesimi.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

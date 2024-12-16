@@ -1,5 +1,6 @@
 ﻿using Hairdresser.Areas.Admin.Models;
 using Hairdresser.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using NuGet.Versioning;
 namespace Hairdresser.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles ="Admin")]
     public class RoleController : Controller
     {
         private readonly RoleManager<Role> _roleManager;

@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan.jpg",
+      "PackagePath": "staticwebassets\\img\\arkaplan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj.webp",
+      "PackagePath": "staticwebassets\\img\\makyaj.webp"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\manikür.webp",
+      "PackagePath": "staticwebassets\\img\\manikür.webp"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sacboyama.jpg",
+      "PackagePath": "staticwebassets\\img\\sacboyama.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sackesimi.jpg",
+      "PackagePath": "staticwebassets\\img\\sackesimi.jpg"
+    },
+    {
       "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

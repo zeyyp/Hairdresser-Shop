@@ -92,5 +92,12 @@ namespace Hairdresser.Controllers
 
             return View(p);
         }
+
+
+        public async Task<IActionResult> Cikis()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("KayitOl", "Login");
+        }
     }
 }

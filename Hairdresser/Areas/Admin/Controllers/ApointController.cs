@@ -3,11 +3,13 @@ using Hairdresser.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hairdresser.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Hairdresser.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ApointController : Controller
     {
 

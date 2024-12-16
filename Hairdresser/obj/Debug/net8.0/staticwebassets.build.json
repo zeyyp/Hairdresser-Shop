@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SecYoVCVzeNs587/nNxRX5qy3wu6y++dBd0Y5p0onkk=",
+  "Hash": "TAZMoXvnp8t4aeCZ9MlodyUjQn7aT40tZSkCKSkRRkM=",
   "Source": "Hairdresser",
   "BasePath": "_content/Hairdresser",
   "Mode": "Default",
@@ -99,6 +99,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan.jpg",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/arkaplan#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9jw9c6n7zd",
+      "Integrity": "9aC/xNR6WXwjXCNjKI0/Px78xKkin5JyZzaF8mQf7UY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\arkaplan.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj.webp",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/makyaj#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g74ezbavjy",
+      "Integrity": "zHubibYh/ppGryiaMvg8ZaxYfnZn3oft1+DyKOJ2Na0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\makyaj.webp"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\manikür.webp",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/manikür#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7u99vm5raj",
+      "Integrity": "D0EtUDvn+p0psefcCufvKd3IeW6LRWeRGhicEUqADyg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\manikür.webp"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sacboyama.jpg",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/sacboyama#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c01kh8wamk",
+      "Integrity": "HJMdpWwBBsp20lMOh/CzZ0so+yCapMr+fsx6IdId7ho=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sacboyama.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sackesimi.jpg",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/sackesimi#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fpu5avc46i",
+      "Integrity": "Te/l1okEWsWhmPHmZwQlCrmtEK8mWvYqkvy8bTLOGO8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sackesimi.jpg"
     },
     {
       "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\js\\site.js",
@@ -6706,6 +6811,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-rrAZPhocVZKmxZoIQjJyx5LWQrdnAyGwgwY0O3Rg1ug="
+        }
+      ]
+    },
+    {
+      "Route": "img/arkaplan.9jw9c6n7zd.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "142426"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9aC/xNR6WXwjXCNjKI0/Px78xKkin5JyZzaF8mQf7UY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 18:15:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9jw9c6n7zd"
+        },
+        {
+          "Name": "label",
+          "Value": "img/arkaplan.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9aC/xNR6WXwjXCNjKI0/Px78xKkin5JyZzaF8mQf7UY="
+        }
+      ]
+    },
+    {
+      "Route": "img/arkaplan.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "142426"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9aC/xNR6WXwjXCNjKI0/Px78xKkin5JyZzaF8mQf7UY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 18:15:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9aC/xNR6WXwjXCNjKI0/Px78xKkin5JyZzaF8mQf7UY="
+        }
+      ]
+    },
+    {
+      "Route": "img/makyaj.g74ezbavjy.webp",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58040"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zHubibYh/ppGryiaMvg8ZaxYfnZn3oft1+DyKOJ2Na0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:46:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g74ezbavjy"
+        },
+        {
+          "Name": "label",
+          "Value": "img/makyaj.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zHubibYh/ppGryiaMvg8ZaxYfnZn3oft1+DyKOJ2Na0="
+        }
+      ]
+    },
+    {
+      "Route": "img/makyaj.webp",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58040"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zHubibYh/ppGryiaMvg8ZaxYfnZn3oft1+DyKOJ2Na0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:46:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zHubibYh/ppGryiaMvg8ZaxYfnZn3oft1+DyKOJ2Na0="
+        }
+      ]
+    },
+    {
+      "Route": "img/manikür.7u99vm5raj.webp",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\manikür.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D0EtUDvn+p0psefcCufvKd3IeW6LRWeRGhicEUqADyg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:47:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7u99vm5raj"
+        },
+        {
+          "Name": "label",
+          "Value": "img/manikür.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D0EtUDvn+p0psefcCufvKd3IeW6LRWeRGhicEUqADyg="
+        }
+      ]
+    },
+    {
+      "Route": "img/manikür.webp",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\manikür.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D0EtUDvn+p0psefcCufvKd3IeW6LRWeRGhicEUqADyg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:47:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D0EtUDvn+p0psefcCufvKd3IeW6LRWeRGhicEUqADyg="
+        }
+      ]
+    },
+    {
+      "Route": "img/sacboyama.c01kh8wamk.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sacboyama.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HJMdpWwBBsp20lMOh/CzZ0so+yCapMr+fsx6IdId7ho=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:42:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c01kh8wamk"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sacboyama.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HJMdpWwBBsp20lMOh/CzZ0so+yCapMr+fsx6IdId7ho="
+        }
+      ]
+    },
+    {
+      "Route": "img/sacboyama.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sacboyama.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HJMdpWwBBsp20lMOh/CzZ0so+yCapMr+fsx6IdId7ho=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:42:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HJMdpWwBBsp20lMOh/CzZ0so+yCapMr+fsx6IdId7ho="
+        }
+      ]
+    },
+    {
+      "Route": "img/sackesimi.fpu5avc46i.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sackesimi.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73179"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Te/l1okEWsWhmPHmZwQlCrmtEK8mWvYqkvy8bTLOGO8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:41:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fpu5avc46i"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sackesimi.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Te/l1okEWsWhmPHmZwQlCrmtEK8mWvYqkvy8bTLOGO8="
+        }
+      ]
+    },
+    {
+      "Route": "img/sackesimi.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sackesimi.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73179"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Te/l1okEWsWhmPHmZwQlCrmtEK8mWvYqkvy8bTLOGO8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:41:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Te/l1okEWsWhmPHmZwQlCrmtEK8mWvYqkvy8bTLOGO8="
         }
       ]
     },

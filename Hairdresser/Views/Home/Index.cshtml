@@ -1,8 +1,24 @@
-﻿@{
+﻿
+@model Hairdresser.Entities.Salon
+
+@{
     ViewData["Title"] = "Home Page";
+    
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
 }
 
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   
+    <br />
+    <br />
+    <br />
+
+    <p>
+        "Modern saç tasarımları, profesyonel bakım ve size özel dokunuşlarla, en iyi halinizi ortaya çıkarmak için buradayız."
+        
+    </p>
+    <p>Hoş geldiniz, güzellik yolculuğunuz başlasın!</p>
+
+    <p>Çalışma Saatlerimiz: @Model.workingHours</p>
 </div>

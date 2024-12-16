@@ -15,6 +15,15 @@
 
     <style>
         /* Ek stil */
+        body {
+            background-image: url('/img/arkaplan.jpg'); /* Doğru yol */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        
         .slider {
             background-color: #f8f9fa;
             height: 300px;
@@ -33,7 +42,17 @@
             background-color: #e9ecef;
             border-radius: 50%;
             margin: 0 auto 15px;
+            display: flex;
+            align-items: center; /* Resmi dikey ortalar */
+            justify-content: center; /* Resmi yatay ortalar */
+            overflow: hidden; /* Taşan kısmı gizler */
         }
+
+            .circle img {
+                width: 100%; /* Resmin genişliği çemberin içine uyar */
+                height: 100%; /* Resmin yüksekliği çemberin içine uyar */
+                object-fit: fill; /* Resmi çerçeveye tam olarak doldurur, orijinal oranları bozar */
+            }
 
         .services {
             margin-bottom: 150px; /* Hizmetler bölümünün altında 50px boşluk */
@@ -44,20 +63,13 @@
             font-weight: bold;
         }
 
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
         .footer .footer-text {
             font-size: 12px; /* Yazı boyutu */
             line-height: 1.5; /* Satır arası boşluk */
         }
 
     </style>
-    
+
 </head>
 
 
@@ -73,22 +85,24 @@
                     <li class="nav-item"><a class="nav-link text-dark" href="#">Biz Kimiz</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#">Hizmetlerimiz</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#contact">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#">Randevu Al</a></li>
-                    
-                    @if(User.Identity?.IsAuthenticated == true){
+                    <li class="nav-item"><a class="nav-link text-dark" asp-controller="Appointment" asp-action="NewAppointment">Randevu Al</a></li>
+
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" > Merhaba,@User.Identity.Name</a>
+                            <a class="nav-link text-dark"> Merhaba,@User.Identity.Name</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Login" asp-action="Cikis"> Çıkış Yap</a>
                         </li>
                     }
-                    else{
+                    else
+                    {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Login" asp-action="GirisYap"> Giriş Yap</a>
                         </li>
                     }
-                    
+
                 </ul>
             </nav>
         </div>
@@ -102,24 +116,65 @@
 
     <!-- Ana İçerik -->
     <main>
-       
+        <!-- Slider -->
+        <div class="slider">
+            <p>Slider</p>
+        </div>
+
+        <!-- Hizmetler -->
+        <section class="services container">
+            <div class="container text-center my-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a asp-action="Hizmetler" asp-controller="Home">
+                        <div class="circle">
+                            <img src="~/img/sackesimi.jpg" alt="Saç Kesimi" class="img-fluid">
+                        </div>   
+                        <p>Saç Kesimi</p>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a asp-action="Hizmetler" asp-controller="Home">
+                        <div class="circle">
+                            <img src="~/img/sacboyama.jpg" alt="Saç Boyama" class="img-fluid">
+                        </div>
+    
+                        <p>Saç Boyama</p>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a asp-action="Hizmetler" asp-controller="Home">
+                        <div class="circle">
+                            <img src="~/img/makyaj.webp" alt="Makyaj" class="img-fluid">
+                        </div>
+                        <p>Makyaj</p>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a asp-action="Hizmetler" asp-controller="Home">
+                        <div class="circle">
+                            <img src="~/img/manikür.webp" alt="Manikür" class="img-fluid">
+                        </div>
+                        <p>Manikür</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
 
         
-        
-
-        
-
-
-
-      
 
         <!-- Footer -->
-        <footer class="footer bg-light py-3">
+        <footer class="footer">
             <div class="container text-center">
                 <h5>Hairdresser</h5>
-                <p class="footer-text mb-0">
+                <p class="footer-text">
                     <strong>Adres:</strong> Ergenekon Mahallesi Nilüfer Sokak KulePark 2/C, Yenişehir, KARABÜK <br>
-                    <strong>Çalışma Saatleri:</strong> 09:30 – 19:00
+                    <strong>Çalışma Saatleri:</strong> 09:00 – 18:00
                 </p>
             </div>
         </footer>
