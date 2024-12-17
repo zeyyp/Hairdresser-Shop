@@ -1,8 +1,17 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\img\arkaplan.jpg
+wwwroot\img\boya1.jpg
+wwwroot\img\boya2.jpg
+wwwroot\img\kuafor1.jpg
 wwwroot\img\makyaj.webp
+wwwroot\img\makyaj1webp.webp
+wwwroot\img\makyaj2.jpg
 wwwroot\img\manikür.webp
+wwwroot\img\pedikür1.jpg
+wwwroot\img\pedikür2.jpg
+wwwroot\img\sac1.jpg
+wwwroot\img\sac2jpg.jpg
 wwwroot\img\sacboyama.jpg
 wwwroot\img\sackesimi.jpg
 wwwroot\js\site.js

@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Hizmetlerimiz";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .service-section {
+            margin: 20px 0; /* Satırlar arasındaki boşluğu arttırdık */
+        }
+
+        .service-title {
+            margin-top: 10px; /* Başlık ile fotoğraf arasındaki boşluğu azaltıyoruz */
+            margin-bottom: 5px; /* Başlık ile açıklama arasındaki mesafeyi azaltıyoruz */
+        }
+
+        .service-description {
+            margin-top: 5px; /* Başlık ile açıklama arasındaki boşluğu kısaltıyoruz */
+            margin-bottom: 0; /* Açıklama ile altındaki içerikler arasındaki boşluğu sıfırlıyoruz */
+        }
+
+        .service-image {
+            width: 50%; /* Fotoğrafın genişliğini %50 yapıyoruz */
+            height: auto; /* Yüksekliği orantılı yapıyoruz */
+        }
+
+        .col-md-6 {
+            padding-left: 5px; /* Sağ ve sol padding değerlerini ayarlayarak boşlukları daraltıyoruz */
+            padding-right: 5px;
+        }
+
+        /* Flexbox düzeni ile öğeleri hizalamak */
+        .two-images {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%; /* Fotoğraflar arasındaki boşluğu ayarlayacağız */
+            max-width: 60%; /* Maksimum genişlik */
+        }
+
+        /* Fotoğraf ve açıklamanın hizalanması için */
+        .service-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 15px; /* Fotoğraf ile açıklama arasındaki mesafeyi belirliyoruz */
+        }
+
+        /* Hizalamanın düzgün olması için flex düzeni */
+        .service-section .col-md-12 {
+            display: flex;
+            justify-content: center; /* Div'leri ortalayacak */
+            align-items: center;
+            text-align: center; /* Yazıları ortalamak için */
+        }
+
+        /* Aradaki boşluğu daraltmak için */
+        .two-images img {
+            margin-right: 10px; /* Fotoğraflar arasındaki boşluğu ayarlıyoruz */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Tüm container'ı ortalayacak */
+            justify-content: center; /* İçeriği dikeyde ortalayacak */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-5">Hizmetlerimiz</h1>
+
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <div class="card p-4" style="min-width: 200px;">
+        <!-- Saç Kesimi -->
+        <div class="row service-section">
+            <div class="col-md-12">
+                <div class="two-images">
+                            <img src="~/img/sac1.jpg" alt="Saç Kesimi" class="service-image">
+                            <img src="~/img/sac2jpg.jpg" alt="Saç Kesimi" class="service-image">
+                </div>
+            </div>
+            <div class="col-md-12 service-text">
+                <h3 class="service-title">Saç Kesimi</h3>
+                <p class="service-description">
+                    Saç kesimi hizmetimiz ile en yeni modelleri sizlere sunuyoruz. Yüz şeklinize uygun tarzda saç kesimi yaparak size özel bir görünüm kazandırıyoruz.
+                </p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <div class="card p-4" style="min-width: 200px;">
+        <!-- Saç Boyama -->
+        <div class="row service-section">
+            <div class="col-md-12">
+                <div class="two-images">
+                            <img src="~/img/boya1.jpg" alt="Saç Boyama" class="service-image">
+                            <img src="~/img/boya2.jpg" alt="Saç Boyama" class="service-image">
+                </div>
+            </div>
+            <div class="col-md-12 service-text">
+                <h3 class="service-title">Saç Boyama</h3>
+                <p class="service-description">
+                    Saç boyama hizmetimizle doğal ve kalıcı renkler ile saçlarınıza yeni bir hayat veriyoruz. Farklı renk seçenekleriyle her zevke hitap ediyoruz.
+                </p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center vh-80">
+            <div class="card p-4" style="min-width: 200px;">
+        <!-- Makyaj -->
+        <div class="row service-section">
+            <div class="col-md-12">
+                <div class="two-images">
+                            <img src="~/img/makyaj1webp.webp" alt="Makyaj" class="service-image">
+                            <img src="~/img/makyaj2.jpg" alt="Makyaj" class="service-image">
+                </div>
+            </div>
+            <div class="col-md-12 service-text">
+                <h3 class="service-title">Makyaj</h3>
+                <p class="service-description">
+                    Profesyonel makyaj hizmetimizle özel günlerde ya da günlük yaşamda ihtiyacınıza uygun makyaj uygulamaları sunuyoruz.
+                </p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <div class="card p-4" style="min-width: 200px;">
+        <!-- Manikür -->
+        <div class="row service-section">
+            <div class="col-md-12">
+                <div class="two-images">
+                            <img src="~/img/pedikür2.jpg" alt="Manikür" class="service-image">
+                            <img src="~/img/pedikür1.jpg" alt="Manikür" class="service-image">
+                </div>
+            </div>
+            <div class="col-md-12 service-text">
+                <h3 class="service-title">Manikür</h3>
+                <p class="service-description">
+                    Ellerinizin bakımlı ve sağlıklı görünmesi için profesyonel manikür hizmetimizden faydalanabilirsiniz. Tırnak bakımı ve renk seçenekleriyle hizmetinizdeyiz.
+                </p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>

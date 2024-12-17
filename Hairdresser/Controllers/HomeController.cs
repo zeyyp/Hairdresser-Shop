@@ -20,11 +20,15 @@ namespace Hairdresser.Controllers
             return View(salon);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Hizmetler()
         {
             return View();
         }
 
+        public IActionResult BizKimiz()
+        {
+            return View();
+        }
 
 
         //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

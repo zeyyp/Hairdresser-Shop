@@ -17,12 +17,48 @@
       "PackagePath": "staticwebassets\\img\\arkaplan.jpg"
     },
     {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya1.jpg",
+      "PackagePath": "staticwebassets\\img\\boya1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya2.jpg",
+      "PackagePath": "staticwebassets\\img\\boya2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\kuafor1.jpg",
+      "PackagePath": "staticwebassets\\img\\kuafor1.jpg"
+    },
+    {
       "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj.webp",
       "PackagePath": "staticwebassets\\img\\makyaj.webp"
     },
     {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj1webp.webp",
+      "PackagePath": "staticwebassets\\img\\makyaj1webp.webp"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\makyaj2.jpg",
+      "PackagePath": "staticwebassets\\img\\makyaj2.jpg"
+    },
+    {
       "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\manikür.webp",
       "PackagePath": "staticwebassets\\img\\manikür.webp"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\pedikür1.jpg",
+      "PackagePath": "staticwebassets\\img\\pedikür1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\pedikür2.jpg",
+      "PackagePath": "staticwebassets\\img\\pedikür2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sac1.jpg",
+      "PackagePath": "staticwebassets\\img\\sac1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sac2jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\sac2jpg.jpg"
     },
     {
       "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\sacboyama.jpg",
