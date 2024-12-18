@@ -1,4 +1,186 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Hizmetlerimiz";
+}
+
+<div class="container my-5">
+    <h2 class="mb-4 text-primary fw-bold">Hizmetlerimiz</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            
+            <h3 class="mb-4 text-info fw-bold">Saç kesimi</h3>
+            <p class="text-dark">
+                Kuaför salonumuzda saç kesimi, sadece bir işlem değil, aynı zamanda bir sanat! 
+                Uzman stilistlerimiz yüz şeklinizi, saç tipinizi ve kişisel tarzınızı göz önünde bulundurarak, 
+                size özel bir görünüm yaratır. 
+            <p class="text-dark">
+                Klasik kesimlerden modern ve cesur stillere kadar her detayı özenle planlıyoruz. 
+                Saçlarınızın sağlıklı ve canlı kalmasını sağlayacak profesyonel ürünlerimizle, 
+                yeni tarzınızın keyfini çıkarabilirsiniz.
+            </p>
+            </p>
+            
+        </div>
+
+        <div class="col-md-6">
+            <img src="~/img/sac1.jpg" class="img-fluid rounded shadow" alt="Salon İç Görsel">
+        </div>
+    </div>
+
+   
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6">
+        
+        <h3 class="mb-4 text-info fw-bold">Saç Boyama</h3>
+        <p class="text-dark">
+            Saç renginizi değiştirmek ya da doğal tonlarınızı canlandırmak mı istiyorsunuz? 
+            İster sıcak bir balyaj, ister çarpıcı platin, ister doğal kahve tonları... Saç boyama uzmanlarımız, en kaliteli ürünlerle hayallerinizdeki rengi elde etmenizi sağlar.
+        <p class="text-dark">
+            Renk uzmanlarımız, saç sağlığınızı koruyarak mükemmel sonuçlar elde etmenize yardımcı olur.
+            Kendinizi renklerin büyüsüne bırakın ve benzersiz bir görünümle ışıldayın!
+        </p>
+        </p>
+
+    </div>
+
+    <div class="col-md-6">
+        <img src="~/img/boya4jpg.jpg" class="img-fluid rounded shadow" alt="Salon İç Görsel">
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6">
+      
+        <h3 class="mb-4 text-info fw-bold">Manikür</h3>
+        <p class="text-dark">
+            Güzellik detaylarda gizlidir ve elleriniz bu detayların en zarif parçasıdır! Profesyonel manikür 
+            hizmetlerimizle, tırnaklarınızı hem sağlıkla hem de şıklıkla buluşturuyoruz.
+        <p class="text-dark">
+            Klasik bakım, jel ya da nail art gibi farklı seçeneklerle tarzınıza uygun tırnak tasarımları sunuyoruz. 
+            Ellerinizin hem yumuşaklığını hem de göz alıcılığını korumak için en kaliteli bakım ürünlerini kullanıyoruz.
+        </p>
+        </p>
+
+    </div>
+
+    <div class="col-md-6">
+        <img src="~/img/pedikür1.jpg" class="img-fluid rounded shadow" alt="Salon İç Görsel">
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6">
+        
+        <h3 class="mb-4 text-info fw-bold">Makyaj</h3>
+        <p class="text-dark">
+            Her yüz bir tuvaldir ve her tuval, kendi hikayesini anlatır. Profesyonel makyaj sanatçılarımız, 
+            yüz hatlarınızı ön plana çıkararak güzelliğinizi vurgulamayı amaçlıyor.
+        <p class="text-dark">
+            Özel günler, davetler ya da günlük makyajlar için doğal, ışıltılı ya da dramatik 
+            görünümler yaratıyoruz. Cilt dostu ve kaliteli makyaj ürünleriyle, güzelliğinize ışık
+            katmak için buradayız. Her anınıza özel bir dokunuş!
+
+
+        </p>
+        </p>
+
+    </div>
+
+    <div class="col-md-6">
+        <img src="~/img/makyaj2.jpg" class="img-fluid rounded shadow" alt="Salon İç Görsel">
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<!-- Stil -->
+<style>
+    body {
+        color: #f8f9fa;
+    }
+
+    .list-group-item {
+        border: none;
+        font-size: 1.1rem;
+    }
+
+    .service-image {
+        width: 100%; /* Görüntülerin kapsayıcının genişliğine uyacak şekilde ayarlanması */
+        max-width: 300px; /* Maksimum genişlik (çok büyük olmasını önlemek için) */
+        height: auto; /* Yükseklik oranını korumak için otomatik ayar */
+        display: block; /* Görüntülerin düzgün sıralanması için */
+        margin: 0 auto; /* Ortalamak için */
+    }
+
+    .two-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Görseller arasındaki boşluk */
+    }
+
+    .large-image {
+        max-width: 150px; /* Saç boyama resmi için daha küçük bir genişlik */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* @{
     ViewData["Title"] = "Hizmetlerimiz";
 }
 
@@ -164,3 +346,4 @@
     <br />
 </body>
 </html>
+ *@

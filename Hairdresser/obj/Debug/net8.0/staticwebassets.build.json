@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W1kaojCKWf+6FZHhQNkv4SkfqYbu1AKGz+qdlG2f+tM=",
+  "Hash": "YFXtwhfPLjACDIsnH/GS9EwOcso01L2byNlVbMIRxwo=",
   "Source": "Hairdresser",
   "BasePath": "_content/Hairdresser",
   "Mode": "Default",
@@ -162,6 +162,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\boya2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya3.jpg",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/boya3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "110pluog5c",
+      "Integrity": "m0ayW1KiGentj9LDb+zhs/CtZrSV8pd0Wd+5iuO1zaE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\boya3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya4jpg.jpg",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/boya4jpg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8it17j9arp",
+      "Integrity": "YBG8t2iCe4jYrEDB6pq7HvOs+0Y2Ix3weO0DE0pxvsg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\boya4jpg.jpg"
     },
     {
       "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\kuafor1.jpg",
@@ -7246,6 +7288,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-SYk+T2RwgXWkF929VoL8hGr8QrzXHLT3jf/RGgv6c2Q="
+        }
+      ]
+    },
+    {
+      "Route": "img/boya3.110pluog5c.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m0ayW1KiGentj9LDb+zhs/CtZrSV8pd0Wd+5iuO1zaE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Dec 2024 14:11:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "110pluog5c"
+        },
+        {
+          "Name": "label",
+          "Value": "img/boya3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m0ayW1KiGentj9LDb+zhs/CtZrSV8pd0Wd+5iuO1zaE="
+        }
+      ]
+    },
+    {
+      "Route": "img/boya3.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m0ayW1KiGentj9LDb+zhs/CtZrSV8pd0Wd+5iuO1zaE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Dec 2024 14:11:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m0ayW1KiGentj9LDb+zhs/CtZrSV8pd0Wd+5iuO1zaE="
+        }
+      ]
+    },
+    {
+      "Route": "img/boya4jpg.8it17j9arp.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya4jpg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8093"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YBG8t2iCe4jYrEDB6pq7HvOs+0Y2Ix3weO0DE0pxvsg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Dec 2024 14:11:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8it17j9arp"
+        },
+        {
+          "Name": "label",
+          "Value": "img/boya4jpg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YBG8t2iCe4jYrEDB6pq7HvOs+0Y2Ix3weO0DE0pxvsg="
+        }
+      ]
+    },
+    {
+      "Route": "img/boya4jpg.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya4jpg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8093"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YBG8t2iCe4jYrEDB6pq7HvOs+0Y2Ix3weO0DE0pxvsg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Dec 2024 14:11:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YBG8t2iCe4jYrEDB6pq7HvOs+0Y2Ix3weO0DE0pxvsg="
         }
       ]
     },
