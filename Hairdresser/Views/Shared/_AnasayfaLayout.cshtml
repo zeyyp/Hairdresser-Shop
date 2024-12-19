@@ -68,6 +68,36 @@
             line-height: 1.5; /* Satır arası boşluk */
         }
 
+        .circle-text {
+            font-family: 'Arial', sans-serif; /* Yazı tipi */
+            font-size: 1.1rem; /* Yazı boyutu */
+            font-weight: bold; /* Kalın yazı */
+            font-style: italic; /* Eğik yazı */
+            color: #000; /* Siyah renk */
+            margin-top: 10px; /* Üstten boşluk */
+        }
+
+            .circle-text:hover {
+                color: #007bff; /* Hover olduğunda metin rengi değişir */
+                transform: scale(1.2); /* Hafif büyüme efekti */
+            }
+
+        .text-decoration-none {
+            text-decoration: none; /* Bağlantı alt çizgisi olmaması için */
+        }
+
+        .carousel-item img {
+            height: 400px; /* Görselin yüksekliği */
+            width: 100%; /* Genişlik tarayıcı genişliği kadar */
+            object-fit: cover; /* Görüntüyü düzgün bir şekilde kırpma */
+        }
+
+        .slider-wrapper {
+            max-width: 900px; /* Genişlik sınırı */
+            margin: 0 auto; /* Ortaya hizalar */
+        }
+       
+
     </style>
 
 </head>
@@ -117,9 +147,51 @@
     <!-- Ana İçerik -->
     <main>
         <!-- Slider -->
-        <div class="slider">
-            <p>Slider</p>
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!-- Slider Gösterge Noktaları -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slider İçerikleri -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Birinci Görsel</h5>
+                        <p>Slider açıklaması buraya gelebilir.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>İkinci Görsel</h5>
+                        <p>Farklı bir açıklama metni burada olabilir.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Üçüncü Görsel</h5>
+                        <p>Bu da üçüncü görselin açıklamasıdır.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Kontrolleri -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
         </div>
+
 
         <!-- Hizmetler -->
         <section class="services container">
@@ -129,8 +201,8 @@
                         <a asp-action="Hizmetler" asp-controller="Home">
                         <div class="circle">
                             <img src="~/img/sackesimi.jpg" alt="Saç Kesimi" class="img-fluid">
-                        </div>   
-                        <p>Saç Kesimi</p>
+                        </div>
+                            <p class="circle-text">Saç Kesimi</p>
                         </a>
                     </div>
                     <div class="col-md-3">
@@ -138,8 +210,8 @@
                         <div class="circle">
                             <img src="~/img/sacboyama.jpg" alt="Saç Boyama" class="img-fluid">
                         </div>
-    
-                        <p>Saç Boyama</p>
+
+                            <p class="circle-text">Saç Boyama</p>
                         </a>
                     </div>
                     <div class="col-md-3">
@@ -147,7 +219,7 @@
                         <div class="circle">
                             <img src="~/img/makyaj.webp" alt="Makyaj" class="img-fluid">
                         </div>
-                        <p>Makyaj</p>
+                            <p class="circle-text">Makyaj</p>
                         </a>
                     </div>
                     <div class="col-md-3">
@@ -155,7 +227,7 @@
                         <div class="circle">
                             <img src="~/img/manikür.webp" alt="Manikür" class="img-fluid">
                         </div>
-                        <p>Manikür</p>
+                            <p class="circle-text">Manikür</p>
                         </a>
                     </div>
                 </div>

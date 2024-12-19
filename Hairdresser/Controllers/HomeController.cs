@@ -30,6 +30,11 @@ namespace Hairdresser.Controllers
             return View();
         }
 
+        public IActionResult Ýletisim()
+        {
+            return View();
+        }
+
 
         //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         //public IActionResult Error()

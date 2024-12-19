@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Hairdresser.Areas.Admin.Controllers.ServicesController",
-    "Method": "GetAllServices",
-    "RelativePath": "api/Services",
+    "ContainingType": "Hairdresser.Controllers.Api.ServiceApiController",
+    "Method": "GetServices",
+    "RelativePath": "api/ServiceApi",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Hairdresser.Areas.Admin.Controllers.ServicesController",
+    "ContainingType": "Hairdresser.Controllers.Api.ServiceApiController",
     "Method": "AddService",
-    "RelativePath": "api/Services",
+    "RelativePath": "api/ServiceApi",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Hairdresser.Areas.Admin.Controllers.ServicesController",
-    "Method": "GetServiceById",
-    "RelativePath": "api/Services/{id}",
+    "ContainingType": "Hairdresser.Controllers.Api.ServiceApiController",
+    "Method": "GetService",
+    "RelativePath": "api/ServiceApi/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Hairdresser.Areas.Admin.Controllers.ServicesController",
+    "ContainingType": "Hairdresser.Controllers.Api.ServiceApiController",
     "Method": "UpdateService",
-    "RelativePath": "api/Services/{id}",
+    "RelativePath": "api/ServiceApi/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -55,7 +55,7 @@
         "IsRequired": true
       },
       {
-        "Name": "service",
+        "Name": "updatedService",
         "Type": "Hairdresser.Entities.Service",
         "IsRequired": true
       }
@@ -63,9 +63,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Hairdresser.Areas.Admin.Controllers.ServicesController",
+    "ContainingType": "Hairdresser.Controllers.Api.ServiceApiController",
     "Method": "DeleteService",
-    "RelativePath": "api/Services/{id}",
+    "RelativePath": "api/ServiceApi/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
