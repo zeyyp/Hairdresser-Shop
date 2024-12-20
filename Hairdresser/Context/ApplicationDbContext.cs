@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Hairdresser.Migrations;
 
 namespace Hairdresser.Context
 {
@@ -16,12 +17,12 @@ namespace Hairdresser.Context
         public DbSet<Expertise>? expertises { get; set; }
         public DbSet<Service>? services { get; set; }
         public DbSet<Appointment>? appointments { get; set; }
-      //  public DbSet<Customer>? customers { get; set; }
-      
-       // public DbSet<Admin>? admins { get; set; }
-        //  public DbSet<Photo> Photos { get; set; }
+
+        public DbSet<Earnings> earnings { get; set; }
 
         
+
+
 
 
     }

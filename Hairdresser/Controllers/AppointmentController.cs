@@ -114,6 +114,12 @@ namespace Hairdresser.Controllers
                 await _context.SaveChangesAsync();
 
 
+                // Kazanç güncelleme işlemi
+                
+                    // Personel için kazanç kaydı ekle
+                    await UpdateEarnings(int.Parse(model.personnel), _appointmentDate, service.servicePrice);
+                
+
 
                 // Başarılı işlem sonrası yönlendirme
                 return RedirectToAction("Index", "Home");
@@ -131,6 +137,32 @@ namespace Hairdresser.Controllers
 
 
 
+        private async Task UpdateEarnings(int personnelID, DateTime date, decimal servicePrice)
+        {
+            // Aynı personelin aynı gününe ait kazançları bul
+            var existingEarnings = await _context.earnings
+                .FirstOrDefaultAsync(e => e.PersonnelID == personnelID && e.Date.Date == date.Date);
+
+            if (existingEarnings != null)
+            {
+                // Eğer mevcut kazanç varsa, ekle
+                existingEarnings.TotalEarnings += servicePrice;
+                _context.earnings.Update(existingEarnings);
+            }
+            else
+            {
+                // Yeni kazanç kaydı oluştur
+                var newEarnings = new Earnings
+                {
+                    PersonnelID = personnelID,
+                    Date = date,
+                    TotalEarnings = servicePrice
+                };
+                await _context.earnings.AddAsync(newEarnings);
+            }
+
+            await _context.SaveChangesAsync();
+        }
 
 
 

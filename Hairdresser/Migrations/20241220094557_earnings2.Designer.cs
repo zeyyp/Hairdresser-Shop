@@ -3,6 +3,7 @@ using System;
 using Hairdresser.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Hairdresser.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241220094557_earnings2")]
+    partial class earnings2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -144,30 +147,6 @@ namespace Hairdresser.Migrations
                     b.HasIndex("serviceID");
 
                     b.ToTable("appointments");
-                });
-
-            modelBuilder.Entity("Hairdresser.Entities.Earnings", b =>
-                {
-                    b.Property<int>("EarningsID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("EarningsID"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("PersonnelID")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal>("TotalEarnings")
-                        .HasColumnType("numeric");
-
-                    b.HasKey("EarningsID");
-
-                    b.HasIndex("PersonnelID");
-
-                    b.ToTable("earnings");
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Expertise", b =>
@@ -430,17 +409,6 @@ namespace Hairdresser.Migrations
                     b.Navigation("personnel");
 
                     b.Navigation("service");
-                });
-
-            modelBuilder.Entity("Hairdresser.Entities.Earnings", b =>
-                {
-                    b.HasOne("Hairdresser.Entities.Personnel", "Personnel")
-                        .WithMany()
-                        .HasForeignKey("PersonnelID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Personnel");
                 });
 
             modelBuilder.Entity("Hairdresser.Entities.Personnel", b =>

@@ -1,0 +1,76 @@
+﻿@using Hairdresser.Entities
+@model IEnumerable<Earnings>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modern Table</title>
+	<style>
+		/* Buraya önerdiğim CSS kodunu yapıştırın */
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			font-family: 'Arial', sans-serif;
+			color: #333;
+		}
+
+		th, td {
+			border: 1px solid #ddd;
+			padding: 10px;
+			text-align: left;
+		}
+
+		th {
+			background-color: #f4f4f4;
+			color: #444;
+			font-weight: bold;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f9f9f9;
+		}
+
+		tr:hover {
+			background-color: #f1f1f1;
+		}
+	</style>
+</head>
+
+<h2>Personel Kazançları</h2>
+<br />
+
+<br />
+
+<table class="table table-sm table-bordered table-sm-custom">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Personel</th>
+			<th>Tarih</th>
+			<th>Toplam Kazanç</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var per in Model)
+		{
+			<tr>
+				<td>@per.EarningsID</td>
+				<td>@per.Personnel.personnelName</td>
+				<td>@per.Date</td>
+				<td>@per.TotalEarnings</td>
+				
+
+			
+			</tr>
+		}
+	</tbody>
+</table>
+
+

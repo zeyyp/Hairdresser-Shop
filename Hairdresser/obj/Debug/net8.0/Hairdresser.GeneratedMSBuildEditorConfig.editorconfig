@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBvaW50XFVwZGF0ZUFwcG9pbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Earnings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRWFybmluZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/uyslz/OneDrive/Masaüstü/vs/Hairdresser/Hairdresser/Areas/Admin/Views/Hizmetler/AddService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGl6bWV0bGVyXEFkZFNlcnZpY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
