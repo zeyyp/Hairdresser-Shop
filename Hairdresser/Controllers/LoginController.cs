@@ -79,7 +79,7 @@ namespace Hairdresser.Controllers
                 if (result.Succeeded)
                 {
                     // Kullanıcı giriş işlemi başarılı
-                    return RedirectToAction("KayitOl", "Login");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -97,7 +97,7 @@ namespace Hairdresser.Controllers
         public async Task<IActionResult> Cikis()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("KayitOl", "Login");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

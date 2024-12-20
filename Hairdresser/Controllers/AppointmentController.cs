@@ -42,17 +42,51 @@ namespace Hairdresser.Controllers
 
             if (ModelState.IsValid)
             {
-                // serviceID'ye karşılık gelen hizmeti al
-              //  var service = await _context.services.FindAsync(model.service);
-               
                 var service = await _context.services.FirstOrDefaultAsync(s => s.serviceID == int.Parse(model.service));
                 var personel = await _context.personnels.FirstOrDefaultAsync(s => s.personnelID == int.Parse(model.personnel));
-                
+
                 if (service == null || personel == null)
                 {
-                  //  ModelState.AddModelError("service", "Geçersiz hizmet seçimi.");
+                    //  ModelState.AddModelError("service", "Geçersiz hizmet seçimi.");
                     return View(model);
                 }
+
+
+                // Seçilen personel ve tarih bilgilerini al
+            //    var selectedDateTime = DateTime.SpecifyKind(model.date, DateTimeKind.Local).ToUniversalTime();
+                var selectedDate = model.date; // model.date'in sadece tarih kısmı
+                selectedDate = selectedDate.ToUniversalTime();
+              
+
+                var appointHour = model.saat;
+                var selectedPersonnelId = int.Parse(model.personnel);
+
+               
+
+
+                // Mevcut randevuları kontrol et
+                var existingAppointments = await _context.appointments
+                    .Where(a => a.personnelID == selectedPersonnelId &&
+                                a.appointmentDate.Date == selectedDate.Date && // Aynı tarihteki randevular
+                                a.appointmentHour == appointHour) // Aynı saatteki randevular
+                    .ToListAsync();
+
+
+                if (existingAppointments.Any())
+                {
+                    // Çakışma var, kullanıcıya hata mesajı göster
+                    ModelState.AddModelError(string.Empty, "Seçtiğiniz saatte bu personel için bir randevu bulunmaktadır. Lütfen başka bir saat seçiniz.");
+                    // Eğer model geçerli değilse tekrar formu ve hizmetleri yükle
+                    ViewBag.Services = _context.services.ToList();
+                    ViewBag.Personels = _context.personnels.ToList();
+                    return View(model);
+                }
+
+
+
+
+
+                
 
                 // Veritabanına kaydedilecek Appointment entity'sini oluştur
                 var _appointmentDate = DateTime.SpecifyKind(model.date, DateTimeKind.Local).ToUniversalTime();
@@ -82,7 +116,7 @@ namespace Hairdresser.Controllers
 
 
                 // Başarılı işlem sonrası yönlendirme
-                return RedirectToAction("GirisYap", "Login");
+                return RedirectToAction("Index", "Home");
             }
             else
             {

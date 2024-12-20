@@ -119,12 +119,21 @@
 
                     @if (User.Identity?.IsAuthenticated == true)
                     {
+             
                         <li class="nav-item">
                             <a class="nav-link text-dark"> Merhaba,@User.Identity.Name</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Login" asp-action="Cikis"> Çıkış Yap</a>
                         </li>
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Salon" asp-action="Index">Admin Sayfasına Dön</a>
+                            </li>
+                        }
                     }
                     else
                     {

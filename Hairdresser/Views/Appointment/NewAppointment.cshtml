@@ -9,6 +9,7 @@
 
 
 <form asp-action="NewAppointment" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
 
     <!-- Ad Soyad -->
     <div class="form-group">
@@ -20,14 +21,21 @@
     <!-- Hizmet -->
     <div class="form-group">
         <label asp-for="service">Hizmet Seçiniz</label>
-        <select class="form-control" asp-for="service">
-            <option value="">Hizmet Seçin</option>
+        <select class="form-control" asp-for="service" id="serviceDropdown">
+            <option value="" data-price="0">Hizmet Seçin</option>
             @foreach (var service in ViewBag.Services as List<Hairdresser.Entities.Service>)
             {
-                <option value="@service.serviceID">@service.serviceName</option>
+                <option value="@service.serviceID" data-price="@service.servicePrice">@service.serviceName</option>
             }
         </select>
         <span asp-validation-for="service" class="text-danger"></span>
+    </div>
+
+
+    <!-- Hizmet Fiyatı -->
+    <div class="form-group">
+        <label>Hizmet Fiyatı:</label>
+        <p id="servicePriceDisplay"></p>
     </div>
 
     <!-- personel -->
@@ -42,6 +50,8 @@
         </select>
         <span asp-validation-for="personnel" class="text-danger"></span>
     </div>
+
+   
 
     <!-- Tarih -->
     <div class="form-group">
@@ -74,8 +84,27 @@
     <button type="submit" class="btn btn-primary">Randevu Al</button>
 </form>
 
+
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+       
+
+        document.getElementById('serviceDropdown').addEventListener('change', function () {
+            // Seçilen option
+            var selectedOption = this.options[this.selectedIndex];
+            // Fiyat bilgisi
+            var price = selectedOption.getAttribute('data-price');
+            // Fiyat alanını güncelle
+            var priceDisplay = document.getElementById('servicePriceDisplay');
+            if (price && price > 0) {
+                priceDisplay.textContent = `Seçtiğiniz hizmetin fiyatı: ${price} TL`;
+            } else {
+                priceDisplay.textContent = "Seçtiğiniz hizmetin fiyatı burada görünecek.";
+            }
+        });
+    </script>
 }
