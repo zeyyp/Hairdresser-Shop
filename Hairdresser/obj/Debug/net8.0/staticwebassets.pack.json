@@ -77,6 +77,14 @@
       "PackagePath": "staticwebassets\\img\\sackesimi.jpg"
     },
     {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\salon1.jpeg",
+      "PackagePath": "staticwebassets\\img\\salon1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\salon2.jpg",
+      "PackagePath": "staticwebassets\\img\\salon2.jpg"
+    },
+    {
       "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -1271,6 +1279,14 @@
     {
       "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\sneat-1.0.0\\yarn.lock",
       "PackagePath": "staticwebassets\\sneat-1.0.0\\yarn.lock"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\uploads\\aifoto1.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\aifoto1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\uploads\\aifoto2.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\aifoto2.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Hairdresser.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

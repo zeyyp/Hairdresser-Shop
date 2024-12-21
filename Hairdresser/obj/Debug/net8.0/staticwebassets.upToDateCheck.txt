@@ -16,6 +16,8 @@ wwwroot\img\sac1.jpg
 wwwroot\img\sac2jpg.jpg
 wwwroot\img\sacboyama.jpg
 wwwroot\img\sackesimi.jpg
+wwwroot\img\salon1.jpeg
+wwwroot\img\salon2.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -315,3 +317,5 @@ wwwroot\sneat-1.0.0\tasks\build.js
 wwwroot\sneat-1.0.0\tasks\prod.js
 wwwroot\sneat-1.0.0\webpack.config.js
 wwwroot\sneat-1.0.0\yarn.lock
+wwwroot\uploads\aifoto1.jpeg
+wwwroot\uploads\aifoto2.jpeg

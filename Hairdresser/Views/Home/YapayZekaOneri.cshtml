@@ -1,0 +1,54 @@
+﻿@using System.Text.Json
+@using Hairdresser.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Yapay Zeka Saç Modeli Önerisi";
+}
+
+<h2>Yapay Zeka Saç Modeli Önerisi</h2>
+
+<form asp-action="YapayZekaOneri" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="photo">Fotoğraf Yükleyin</label>
+        <input type="file" name="photo" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Öneri Al</button>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <div class="mt-4">
+        <h4>Oluşturulan Görsel:</h4>
+        @{
+            try
+            {
+                // JSON'u ayrıştır ve linki çek
+                var jsonDocument = JsonDocument.Parse(ViewBag.Response.ToString());
+                var imageUrl = jsonDocument.RootElement
+                .GetProperty("data")[0]
+                .GetProperty("url")
+                .GetString();
+
+                if (!string.IsNullOrEmpty(imageUrl))
+                {
+                    <img src="@imageUrl" alt="Yapay Zeka Saç Modeli" class="img-fluid mt-3" />
+                }
+                else
+                {
+                    <div class="alert alert-warning">Görsel URL'si bulunamadı.</div>
+                }
+            }
+            catch (Exception ex)
+            {
+                <div class="alert alert-danger">JSON ayrıştırma hatası: @ex.Message</div>
+            }
+        }
+    </div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger mt-2">
+        @ViewBag.Error
+    </div>
+}

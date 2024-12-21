@@ -1,6 +1,4 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -14,27 +12,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.0.0/jquery.validate.unobtrusive.min.js"></script>
 
     <style>
-        /* Ek stil */
+        /* Genel stil */
         body {
-            background-image: url('/img/arkaplan.jpg'); /* Doğru yol */
+            background-image: url('/img/arkaplan.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             height: 100vh;
         }
 
-        
-        .slider {
-            background-color: #f8f9fa;
-            height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #6c757d;
-            margin-bottom: 30px;
+        /* Slider boyutları */
+        .custom-slider {
+            max-width: 800px; /* Slider genisligi */
+            height: 200px; /* Slider yüksekliği */
+            margin: 0 auto; /* Ortalama */
         }
+
+            .custom-slider img {
+                height: 200px;
+                width: 100%;
+                object-fit: cover; /* Görüntüyü düzgün bir şekilde kırpma */
+            }
 
         .circle {
             width: 120px;
@@ -43,66 +41,43 @@
             border-radius: 50%;
             margin: 0 auto 15px;
             display: flex;
-            align-items: center; /* Resmi dikey ortalar */
-            justify-content: center; /* Resmi yatay ortalar */
-            overflow: hidden; /* Taşan kısmı gizler */
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
             .circle img {
-                width: 100%; /* Resmin genişliği çemberin içine uyar */
-                height: 100%; /* Resmin yüksekliği çemberin içine uyar */
-                object-fit: fill; /* Resmi çerçeveye tam olarak doldurur, orijinal oranları bozar */
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
             }
 
-        .services {
-            margin-bottom: 150px; /* Hizmetler bölümünün altında 50px boşluk */
-        }
-
-        .service p {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .footer .footer-text {
-            font-size: 12px; /* Yazı boyutu */
-            line-height: 1.5; /* Satır arası boşluk */
-        }
-
         .circle-text {
-            font-family: 'Arial', sans-serif; /* Yazı tipi */
-            font-size: 1.1rem; /* Yazı boyutu */
-            font-weight: bold; /* Kalın yazı */
-            font-style: italic; /* Eğik yazı */
-            color: #000; /* Siyah renk */
-            margin-top: 10px; /* Üstten boşluk */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #000;
+            margin-top: 10px;
         }
 
             .circle-text:hover {
-                color: #007bff; /* Hover olduğunda metin rengi değişir */
-                transform: scale(1.2); /* Hafif büyüme efekti */
+                color: #007bff;
+                transform: scale(1.2);
             }
 
-        .text-decoration-none {
-            text-decoration: none; /* Bağlantı alt çizgisi olmaması için */
+        .services {
+            margin-bottom: 150px;
         }
 
-        .carousel-item img {
-            height: 400px; /* Görselin yüksekliği */
-            width: 100%; /* Genişlik tarayıcı genişliği kadar */
-            object-fit: cover; /* Görüntüyü düzgün bir şekilde kırpma */
+        .footer .footer-text {
+            font-size: 12px;
+            line-height: 1.5;
         }
-
-        .slider-wrapper {
-            max-width: 900px; /* Genişlik sınırı */
-            margin: 0 auto; /* Ortaya hizalar */
-        }
-       
 
     </style>
 
 </head>
-
-
 
 <body>
     <!-- Header -->
@@ -116,10 +91,10 @@
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Hizmetler">Hizmetlerimiz</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="İletisim">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Appointment" asp-action="NewAppointment">Randevu Al</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="YapayZekaOneri">Ai Öneri Al</a></li>
 
                     @if (User.Identity?.IsAuthenticated == true)
                     {
-             
                         <li class="nav-item">
                             <a class="nav-link text-dark"> Merhaba,@User.Identity.Name</a>
                         </li>
@@ -156,51 +131,27 @@
     <!-- Ana İçerik -->
     <main>
         <!-- Slider -->
-        
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <!-- Slider Gösterge Noktaları -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-
-            <!-- Slider İçerikleri -->
+        <div id="modernSlider" class="carousel slide custom-slider" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Birinci Görsel</h5>
-                        <p>Slider açıklaması buraya gelebilir.</p>
-                    </div>
+                    <img src="~/img/salon2.jpg" class="d-block w-100" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>İkinci Görsel</h5>
-                        <p>Farklı bir açıklama metni burada olabilir.</p>
-                    </div>
+                    <img src="https://via.placeholder.com/600x300" class="d-block w-100" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Üçüncü Görsel</h5>
-                        <p>Bu da üçüncü görselin açıklamasıdır.</p>
-                    </div>
+                    <img src="https://via.placeholder.com/600x300" class="d-block w-100" alt="Slide 3">
                 </div>
             </div>
-
-            <!-- Slider Kontrolleri -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#modernSlider" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Önceki</span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#modernSlider" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Sonraki</span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
-
 
         <!-- Hizmetler -->
         <section class="services container">
@@ -208,46 +159,40 @@
                 <div class="row">
                     <div class="col-md-3">
                         <a asp-action="Hizmetler" asp-controller="Home">
-                        <div class="circle">
-                            <img src="~/img/sackesimi.jpg" alt="Saç Kesimi" class="img-fluid">
-                        </div>
+                            <div class="circle">
+                                <img src="~/img/sackesimi.jpg" alt="Saç Kesimi" class="img-fluid">
+                            </div>
                             <p class="circle-text">Saç Kesimi</p>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a asp-action="Hizmetler" asp-controller="Home">
-                        <div class="circle">
-                            <img src="~/img/sacboyama.jpg" alt="Saç Boyama" class="img-fluid">
-                        </div>
+                            <div class="circle">
+                                <img src="~/img/sacboyama.jpg" alt="Saç Boyama" class="img-fluid">
+                            </div>
 
                             <p class="circle-text">Saç Boyama</p>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a asp-action="Hizmetler" asp-controller="Home">
-                        <div class="circle">
-                            <img src="~/img/makyaj.webp" alt="Makyaj" class="img-fluid">
-                        </div>
+                            <div class="circle">
+                                <img src="~/img/makyaj.webp" alt="Makyaj" class="img-fluid">
+                            </div>
                             <p class="circle-text">Makyaj</p>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a asp-action="Hizmetler" asp-controller="Home">
-                        <div class="circle">
-                            <img src="~/img/manikür.webp" alt="Manikür" class="img-fluid">
-                        </div>
+                            <div class="circle">
+                                <img src="~/img/manikür.webp" alt="Manikür" class="img-fluid">
+                            </div>
                             <p class="circle-text">Manikür</p>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-
-
-        
 
         <!-- Footer -->
         <footer class="footer">
@@ -259,9 +204,7 @@
                 </p>
             </div>
         </footer>
-
     </main>
-
 
     @RenderSection("Scripts", required: false)
     <!-- Bootstrap JS -->

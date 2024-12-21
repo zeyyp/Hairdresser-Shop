@@ -53,7 +53,7 @@ namespace Hairdresser.Controllers
 
 
                 // Seçilen personel ve tarih bilgilerini al
-            //    var selectedDateTime = DateTime.SpecifyKind(model.date, DateTimeKind.Local).ToUniversalTime();
+           
                 var selectedDate = model.date; // model.date'in sadece tarih kısmı
                 selectedDate = selectedDate.ToUniversalTime();
               
