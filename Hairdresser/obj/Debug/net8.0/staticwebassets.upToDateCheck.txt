@@ -1,6 +1,7 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\img\arkaplan.jpg
+wwwroot\img\arkaplan2.jpg
 wwwroot\img\boya1.jpg
 wwwroot\img\boya2.jpg
 wwwroot\img\boya3.jpg

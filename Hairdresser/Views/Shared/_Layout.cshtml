@@ -64,16 +64,20 @@
 
 <body>
     <!-- Header -->
-    <header class="bg-light border-bottom py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo h4 mb-0">Hairdresser</div>
-            <nav>
-                <ul class="nav">
+    <header class="navbar navbar-expand-lg navbar-light bg-light border-bottom py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hairdresser</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Anasayfa</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="bizkimiz">Biz Kimiz</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Hizmetler">Hizmetlerimiz</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="İletisim">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" asp-controller="Appointment" asp-action="NewAppointment">Randevu Al</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="YapayZekaOneri">Ai Öneri Al</a></li>
                     
                     @if(User.Identity?.IsAuthenticated == true){
                         <li class="nav-item">
@@ -82,6 +86,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Login" asp-action="Cikis"> Çıkış Yap</a>
                         </li>
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Salon" asp-action="Index">Admin Sayfasına Dön</a>
+                            </li>
+                        }
                     }
                     else{
                         <li class="nav-item">
@@ -90,7 +101,7 @@
                     }
                     
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A7qFhNvtVxKrH55GfibxYTcdXg+x7ujnom86B7h+zus=",
+  "Hash": "v2M/zCU+Bvs0V6+/fZuDwcZ4ILo//1Z6Ue7I54ev7ig=",
   "Source": "Hairdresser",
   "BasePath": "_content/Hairdresser",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\arkaplan.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan2.jpg",
+      "SourceId": "Hairdresser",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\",
+      "BasePath": "_content/Hairdresser",
+      "RelativePath": "img/arkaplan2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9p0d869om3",
+      "Integrity": "zbQ1FN2RlEsb1si6uUXNA3FDUo6Rhr1/yzj22hfzEzM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\arkaplan2.jpg"
     },
     {
       "Identity": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\boya1.jpg",
@@ -7208,6 +7229,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-9aC/xNR6WXwjXCNjKI0/Px78xKkin5JyZzaF8mQf7UY="
+        }
+      ]
+    },
+    {
+      "Route": "img/arkaplan2.9p0d869om3.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zbQ1FN2RlEsb1si6uUXNA3FDUo6Rhr1/yzj22hfzEzM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 20:07:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9p0d869om3"
+        },
+        {
+          "Name": "label",
+          "Value": "img/arkaplan2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zbQ1FN2RlEsb1si6uUXNA3FDUo6Rhr1/yzj22hfzEzM="
+        }
+      ]
+    },
+    {
+      "Route": "img/arkaplan2.jpg",
+      "AssetFile": "C:\\Users\\uyslz\\OneDrive\\Masaüstü\\vs\\Hairdresser\\Hairdresser\\wwwroot\\img\\arkaplan2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zbQ1FN2RlEsb1si6uUXNA3FDUo6Rhr1/yzj22hfzEzM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 20:07:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zbQ1FN2RlEsb1si6uUXNA3FDUo6Rhr1/yzj22hfzEzM="
         }
       ]
     },
@@ -33146,7 +33249,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Dec 2024 13:01:14 GMT"
+          "Value": "Thu, 26 Dec 2024 20:19:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33183,7 +33286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Dec 2024 13:01:14 GMT"
+          "Value": "Thu, 26 Dec 2024 20:19:43 GMT"
         },
         {
           "Name": "Cache-Control",
