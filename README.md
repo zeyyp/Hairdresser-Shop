@@ -5,7 +5,7 @@ Sistem, kullanıcıların uygun çalışanların uygun saatlerinde işlem bazlı
 Uygulamada kullanıcı ve admin panelleri yer almakta olup, kullanıcıların sisteme üye olma ve oturum açma işlemleri yetkilendirme mekanizmaları ile desteklenmiştir. Veritabanı yönetimi için postgreSql ve Entity Framework Core kullanılmış, Bootstrap ile kullanıcı dostu bir arayüz tasarlanmıştır. 
 
 
-Temel Özellikler:
+### Temel Özellikler:
 Hizmet Tanımlama: Hizmet türleri, süreleri ve ücretlerinin yönetimi.
 Randevu Yönetimi: Kullanıcıların uygun çalışanlarla işlem bazlı randevu oluşturabilmesi.
 Uzmanlık ve Müsaitlik Takibi: Çalışanların uzmanlık alanları ve müsaitlik durumlarının takibi.
@@ -15,14 +15,14 @@ Kimlik Doğrulama: Üyelik ve oturum açma işlemleri için ASP.NET Core Identit
 Veritabanı Yönetimi: PostgreSQL ve Entity Framework Core kullanılarak veritabanı işlemleri.
 Kullanıcı Dostu Arayüz: Bootstrap ile tasarlanmış dinamik ve kullanıcı dostu bir arayüz.
 
-##Uygulama Mimarisi
+## Uygulama Mimarisi
 ###Entity Katmanı
 Veritabanı tablolarını temsil eden sınıflar tanımlandı.
 Tablolara ait sütunlar ve ilişkiler burada belirlendi.
-###Context Katmanı
+### Context Katmanı
 PostgreSQL veritabanı ile bağlantı kurularak tabloların oluşturulması sağlandı.
 
-###Controllerlar
+### Controllerlar
 AppointmentController:
 NewAppointment (GET): Kullanıcıya yeni randevu oluşturma formunu gösterir.
 NewAppointment (POST): Randevu bilgilerini işler, çakışmaları kontrol eder ve uygunsa veritabanına kaydeder.
@@ -35,10 +35,10 @@ LoginController:
 Kayıt olma, giriş yapma ve çıkış yapma işlemlerini yönetir.
 ASP.NET Core Identity altyapısını kullanır.
 
-##Admin Paneli
+## Admin Paneli
 Admin paneli ayrı bir alan (Areas) olarak tasarlandı.
 
-Özellikler:
+### Özellikler:
 Personel Yönetimi: Personel ekleme, silme, güncelleme ve listeleme.
 Hizmet Yönetimi: Hizmetlerin yönetimi.
 Randevu Yönetimi: Alınan randevuların onaylanması veya iptali.
@@ -50,6 +50,8 @@ RoleAta (POST): Seçilen rolleri kullanıcıya atar.
 Authorization İşlemleri
 IdentitySeedData: Admin rolündeki bir kullanıcı yoksa uygulama başlatıldığında otomatik olarak oluşturulur.
 Admin paneline yalnızca admin rolündeki kullanıcılar erişebilir.
+
+
 
 
 
