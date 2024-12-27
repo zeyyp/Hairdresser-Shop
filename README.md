@@ -4,6 +4,7 @@ Bu proje, ASP.NET Core MVC kullanılarak geliştirilmiş bir Kuaför İşletme Y
 Sistem, kullanıcıların uygun çalışanların uygun saatlerinde işlem bazlı randevu oluşturmasına olanak tanır. Ayrıca, kullanıcıların uygulamaya fotoğraf yükleyerek saç modeli önerileri almasını sağlayan yapay zeka entegrasyonu da mevcuttur. 
 Uygulamada kullanıcı ve admin panelleri yer almakta olup, kullanıcıların sisteme üye olma ve oturum açma işlemleri yetkilendirme mekanizmaları ile desteklenmiştir. Veritabanı yönetimi için postgreSql ve Entity Framework Core kullanılmış, Bootstrap ile kullanıcı dostu bir arayüz tasarlanmıştır. 
 
+![Admin Panelindeki Randevu listesi](Hairdresser/wwwroot/img/anasayfaReadme.png)
 
 ### Temel Özellikler:
 Hizmet Tanımlama: Hizmet türleri, süreleri ve ücretlerinin yönetimi.
@@ -27,6 +28,10 @@ AppointmentController:
 NewAppointment (GET): Kullanıcıya yeni randevu oluşturma formunu gösterir.
 NewAppointment (POST): Randevu bilgilerini işler, çakışmaları kontrol eder ve uygunsa veritabanına kaydeder.
 UpdateEarnings: Randevu sonrası personelin günlük kazancını günceller.
+
+
+<img src="Hairdresser/wwwroot/img/randevuKayit.png" alt="" width="300">
+
 HomeController:
 Statik sayfaların (Hizmetler, İletişim, Biz Kimiz?) yönetimini sağlar.
 Salon bilgilerini dinamik olarak getirir.
@@ -53,6 +58,7 @@ Admin paneline yalnızca admin rolündeki kullanıcılar erişebilir.
 
 
 
+![Admin Panelindeki Randevu listesi](Hairdresser/wwwroot/img/adminRandevu.png)
 
 
 
