@@ -85,7 +85,7 @@ namespace Hairdresser.Controllers
 
         public IActionResult Index()
         {
-            var salon = _context.salons.FirstOrDefault();
+            var salon = _context.salons.FirstOrDefault();  //salons tablosundaki ilk kaydý alýr
             return View(salon);
         }
 
